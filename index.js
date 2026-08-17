@@ -10,8 +10,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 const responses = {
   '#cancelWDDONE': 'proses pembatalan withdraw telah selesai kak, dan saldo sudah kami kembalikan ke dompet utama ya kakak. Silakan dicek kembali kak^^',
   '#ajukanULANGWD': 'withdraw kakak sudah kami cancel ya, silakan ajukan ulang withdrawnya kak :)',
-  '#WDLIMIT': 'Mohon maaf atas kendala yang terjadi ya kak, kami tidak dapat memproses withdraw ke nomor rekening kakak yang terdaftar dikarenakan rekening kakak terindikasi mengalami limit bulanan ya kak🙏
-'
+  '#WDLIMIT': 'Mohon maaf atas kendala yang terjadi ya kak, kami tidak dapat memproses withdraw ke nomor rekening kakak yang terdaftar dikarenakan rekening kakak terindikasi mengalami limit bulanan ya kak'
 };
 
 // Respon saat user kirim /start

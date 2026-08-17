@@ -38,8 +38,7 @@ BANK Terdaftar :
 BANK Terupdate :
 SALDO :
 ALASAN : `
-  '#CARAISIFORMATRESET': `
-WEB : diisi nama web/situs kami
+  '#CARAISIFORMATRESET': `WEB : diisi nama web/situs kami
 User ID : diisi ID/username untuk login
 Nama Yang Terdaftar : diisi nama rekening terdaftar di web/situs kami
 Nama Yang Terupdate : diisi nama rekening yang benar sesuai KTP Anda

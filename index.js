@@ -15,7 +15,7 @@ const responses = {
 
 // Perintah /start
 bot.start((ctx) => {
-  ctx.reply('Halo! Bot sudah aktif. Ketik /list untuk melihat daftar hashtag yang tersedia.');
+  ctx.reply('Butuh bantuan hashtag? Ketik /list ya ^^. Dibuat oleh @shllwGrave.');
 });
 
 // Perintah /list untuk menampilkan seluruh hashtag

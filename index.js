@@ -30,7 +30,7 @@ bot.command('list', (ctx) => {
   hashtags.forEach((tag, index) => {
     message += `${index + 1}. ${tag}\n`;
   });
-  message += '\nKetik/klik salah satu hashtag di atas untuk melihat isinya!';
+  message += '\nKetik # sesuai list agar muncul isinya ya!';
 
   ctx.replyWithMarkdown(message);
 });

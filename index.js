@@ -500,51 +500,63 @@ bot.command('list', async (ctx) => {
       return ctx.reply('Belum ada hashtag yang terdaftar.');
     }
 
-    // Template kelompok (Key disesuaikan agar tidak error)
+    // Key internal yang bersih tanpa emoji biar gak error lagi
     const grouped = {
-      "🔍 Cek & Kendala": [],
-      "📜 Riwayat": [],
-      "🔄 Reset Account & Password": [],
-      "🎁 Promo": [],
-      "🎰 Rollingan & Freeround": [],
-      "💳 Deposit & QRIS": [],
-      "💸 Withdraw & Transaksi": [],
-      "📌 Lainnya": []
+      cek: [],
+      riwayat: [],
+      reset: [],
+      promo: [],
+      rollingan: [],
+      deposit: [],
+      withdraw: [],
+      lainnya: []
+    };
+
+    // Label tampilan untuk pesan Telegram
+    const labels = {
+      cek: "🔍 Cek & Kendala",
+      riwayat: "📜 Riwayat",
+      reset: "🔄 Reset Account & Password",
+      promo: "🎁 Promo",
+      rollingan: "🎰 Rollingan & Freeround",
+      deposit: "💳 Deposit & QRIS",
+      withdraw: "💸 Withdraw & Transaksi",
+      lainnya: "📌 Lainnya"
     };
 
     // Filter otomatis berdasarkan keyword nama hashtag
     allHashtags.forEach(tag => {
       const t = tag.toLowerCase();
       if (t.includes('cek') || t.includes('kendala') || t.includes('detail') || t.includes('ss')) {
-        grouped["🔍 Cek & Kendala"].push(tag);
+        grouped.cek.push(tag);
       } else if (t.includes('riwayat') || t.includes('rekam')) {
-        grouped["📜 Riwayat"].push(tag);
+        grouped.riwayat.push(tag);
       } else if (t.includes('reset') || t.includes('password') || t.includes('pw')) {
-        grouped["🔄 Reset Account & Password"].push(tag);
+        grouped.reset.push(tag);
       } else if (t.includes('promo') || t.includes('selamat')) {
-        grouped["🎁 Promo"].push(tag);
+        grouped.promo.push(tag);
       } else if (t.includes('rollingan') || t.includes('freeround')) {
-        grouped["🎰 Rollingan & Freeround"].push(tag);
+        grouped.rollingan.push(tag);
       } else if (t.includes('qris') || t.includes('depo')) {
-        grouped["💳 Deposit & QRIS"].push(tag);
+        grouped.deposit.push(tag);
       } else if (t.includes('wd') || t.includes('format')) {
-        grouped["💸 Withdraw & Transaksi"].push(tag);
+        grouped.withdraw.push(tag);
       } else {
-        grouped["📌 Lainnya"].push(tag);
+        grouped.lainnya.push(tag);
       }
     });
 
     // Susun pesan
     let message = '*Daftar Hashtag Tersedia:*\n\n';
 
-    for (const [category, tags] of Object.entries(grouped)) {
+    for (const [key, tags] of Object.entries(grouped)) {
       if (tags.length > 0) {
-        message += `*${category}*\n`;
+        message += `*${labels[key]}*\n`;
         message += tags.map(tag => `#${tag}`).join(', ') + '\n\n';
       }
     }
 
-    // Kirim balasan dengan parse_mode Markdown agar tulisan tebal/bold berfungsi
+    // Kirim balasan dengan parse_mode Markdown
     await ctx.reply(message, { parse_mode: 'Markdown' });
   } catch (error) {
     console.error('Error pada command /list:', error);

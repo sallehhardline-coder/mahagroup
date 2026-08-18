@@ -547,7 +547,7 @@ bot.command('list', async (ctx) => {
       }
     });
 
-    // Susun isi pesan
+   // Susun isi pesan
     let message = '<b>Daftar Hashtag Tersedia:</b>\n\n';
 
     for (const [key, tags] of Object.entries(grouped)) {
@@ -557,16 +557,13 @@ bot.command('list', async (ctx) => {
       }
     }
 
+    message += 'Ketik #namahashtag atau /namahashtag yang ada di list agar muncul isinya ya 😉';
+
     await ctx.reply(message, { parse_mode: 'HTML' });
   } catch (error) {
     console.error('Error pada command /list:', error);
     ctx.reply('Gagal mengambil daftar hashtag.');
   }
-});
-
-    message += 'Ketik #namahashtag atau /namahashtag yang ada di list agar muncul isinya ya 😉';
-
-    ctx.replyWithMarkdown(message);
 });
 
 // Handle teks hashtag dan command slash

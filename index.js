@@ -612,10 +612,14 @@ bot.command('add', (ctx) => {
   return ctx.reply(`✅ Berhasil menambahkan ${newTag}!`);
 });
 
-// 2. Fitur Cari Hashtag (/buk atau #buk)
-bot.on('text', (ctx) => {
+// 📌 FITUR CARI HASHTAG (/buk atau #buk)
+bot.on('text', (ctx, next) => {
   const text = ctx.message.text.trim();
-  if (text.startsWith('/add')) return;
+
+  // 🛑 Abaikan perintah sistem bawaan biar gak dibaca sebagai hashtag!
+  if (text.startsWith('/start') || text.startsWith('/list') || text.startsWith('/add')) {
+    return next(); // Lanjut ke perintah /start, /list, atau /add aslinya
+  }
 
   if (text.startsWith('/') || text.startsWith('#')) {
     const keyword = text.replace(/^[/|#]/, '').toLowerCase();
@@ -633,7 +637,6 @@ bot.on('text', (ctx) => {
     }
   }
 });
-
 
 
 // Command /start

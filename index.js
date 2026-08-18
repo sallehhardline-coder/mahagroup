@@ -487,20 +487,23 @@ Silahkan kakak bisa pilih salah satu metode deposit yang tertera di menu Form De
 
 // Command /start
 bot.start((ctx) => {
-  ctx.reply(`Butuh bantuan hashtag? Ketik /list ya ^^. 
-Dibuat oleh @shllwGrave 🗿`);
+  ctx.reply('Butuh bantuan hashtag? Ketik /list ya ^^.\nDibuat oleh @shllwGrave 🗿');
 });
 
 // Command /list (Otomatis Grouping dari responses)
 bot.command('list', async (ctx) => {
   try {
+    if (typeof responses === 'undefined' || !responses) {
+      return ctx.reply('Data responses belum terdaftar/kosong.');
+    }
+
     const allHashtags = Object.keys(responses);
 
     if (allHashtags.length === 0) {
       return ctx.reply('Belum ada hashtag yang terdaftar.');
     }
 
-    // Key internal yang bersih tanpa emoji biar gak error lagi
+    // Key internal tanpa emoji biar anti-error
     const grouped = {
       cek: [],
       riwayat: [],
@@ -512,7 +515,7 @@ bot.command('list', async (ctx) => {
       lainnya: []
     };
 
-    // Label tampilan untuk pesan Telegram
+    // Label tampilan untuk Telegram
     const labels = {
       cek: "🔍 Cek & Kendala",
       riwayat: "📜 Riwayat",
@@ -524,7 +527,7 @@ bot.command('list', async (ctx) => {
       lainnya: "📌 Lainnya"
     };
 
-    // Filter otomatis berdasarkan keyword nama hashtag
+    // Filter hashtag berdasarkan keyword
     allHashtags.forEach(tag => {
       const t = tag.toLowerCase();
       if (t.includes('cek') || t.includes('kendala') || t.includes('detail') || t.includes('ss')) {
@@ -546,18 +549,17 @@ bot.command('list', async (ctx) => {
       }
     });
 
-    // Susun pesan
-    let message = '*Daftar Hashtag Tersedia:*\n\n';
+    // Sederhanakan format teks biar aman dari error formatting
+    let message = '<b>Daftar Hashtag Tersedia:</b>\n\n';
 
     for (const [key, tags] of Object.entries(grouped)) {
       if (tags.length > 0) {
-        message += `*${labels[key]}*\n`;
+        message += `<b>${labels[key]}</b>\n`;
         message += tags.map(tag => `#${tag}`).join(', ') + '\n\n';
       }
     }
 
-    // Kirim balasan dengan parse_mode Markdown
-    await ctx.reply(message, { parse_mode: 'Markdown' });
+    await ctx.reply(message, { parse_mode: 'HTML' });
   } catch (error) {
     console.error('Error pada command /list:', error);
     ctx.reply('Gagal mengambil daftar hashtag.');

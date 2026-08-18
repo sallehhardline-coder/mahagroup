@@ -353,7 +353,7 @@ bot.command('list', (ctx) => {
   hashtags.forEach((tag, index) => {
     message += `${index + 1}. ${tag}\n`;
   });
-  message += '\nKetik #namahashtag yang ada di list agar muncul isinya ya 😉';
+  message += '\nKetik #namahashtag atau /namahastag yang ada di list agar muncul isinya ya 😉';
 
   ctx.replyWithMarkdown(message);
 });

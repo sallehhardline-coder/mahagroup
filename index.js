@@ -480,7 +480,18 @@ Untuk penarikan/withdraw
 - Minimal saldo yang bisa diwithdraw sebesar 20.000
 
 Silahkan kakak bisa pilih salah satu metode deposit yang tertera di menu Form Deposit :)`,
+  
   '#kendalamembaca': 'jika memiliki kendala dalam hal membaca, maka mintalah bantuan orang lain untuk membacakan dan menjelaskannya kepada Anda ya kak ^^ ',
+
+  '#kasar': 'sebaiknya gunakan kata yang pantas dan baik yah kaka. karena setiap kata yang terucap itu adalah doa. coba kaka berkata yang baik. semoga saja kaka kedepannya akan mendapat kemenangan yang luar biasa yah kak. ',
+
+  '#kasar2': 'Kami mohon kerja samanya ya kakak untuk tidak menggunakan kata-kata kasar atau tidak pantas sehingga kami dapat memberikan pelayanan terbaik untuk kaka🙏🙏 ',
+
+  '#kasar3': 'Kami menyarankan dan mohon kerja sama kakak untuk tidak menggunakan kata-kata kasar atau tidak pantas, sehingga kami dapat memberikan pelayanan terbaik untuk Anda ya, kak 😊 ',
+
+  '#marah': `Mohon maaf kak, kami hanya operator yang menghubungkan kaka main di Provider GAME.
+Untuk menang atau kalah itu semua di luar kuasa kami, kami doakan semoga kaka beruntung / hoki di permainan berikutnya ya kak 😊🙏🏻 `,
+  
   
 };
 

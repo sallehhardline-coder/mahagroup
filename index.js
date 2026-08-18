@@ -592,6 +592,9 @@ CQ9 Slot`,
 
   '#vipmt': 'fitur VIP masih dalam maintenance hingga waktu yang belum dapat kami pastikan kapan selesainya ya kak. Jadi, untuk sementara waktu tidak ada fitur VIP kak🙏',
 
+  '#wdcekmutasi': 'untuk kendala withdraw pada ID tersebut, setelah kami cek bahwa withdraw tersebut sudah kami transfer namun terjadi kegagalan dari pihak BANK/Ewallet terkait yang kakak gunakan ya kak, dan untuk saldo pada BANK Withdraw kami telah terpotong meskipun transaksinya gagal ya kak. Mohon ditunggu dalam 1 x 24 jam ke depan (estimasi Waktu paling cepat) atau dalam 7 x 24 jam ke depan (estimasi Waktu paling lambatnya) ',
+  
+
 };
 
 // 1. Fitur Tambah Hashtag Baru

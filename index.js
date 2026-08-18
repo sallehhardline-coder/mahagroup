@@ -184,7 +184,7 @@ https://customer.customersupportdesk.ai/chat?workspaceId=019bfd25-bb3c-71b1-83d6
 Whatsapp: https://wa.me/+94762388938
 Telegram: https://t.me/MAHAGRUP`,
 
-  '#formatresetbank': `WEB : 
+  '#formatreset': `WEB : 
 User ID : 
 Nama Yang Terdaftar : 
 Nama Yang Terupdate : 

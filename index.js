@@ -481,8 +481,6 @@ Untuk penarikan/withdraw
 
 Silahkan kakak bisa pilih salah satu metode deposit yang tertera di menu Form Deposit :)`,
   
-
-
 };
 
 // Command /start
@@ -549,7 +547,6 @@ bot.command('list', async (ctx) => {
       }
     });
 
-    // Sederhanakan format teks biar aman dari error formatting
     let message = '<b>Daftar Hashtag Tersedia:</b>\n\n';
 
     for (const [key, tags] of Object.entries(grouped)) {
@@ -565,6 +562,13 @@ bot.command('list', async (ctx) => {
     ctx.reply('Gagal mengambil daftar hashtag.');
   }
 });
+
+// Jalankan Bot
+bot.launch();
+
+// Enable graceful stop
+process.once('SIGINT', () => bot.stop('SIGINT'));
+process.once('SIGTERM', () => bot.stop('SIGTERM'));
 
     message += 'Ketik #namahashtag atau /namahashtag yang ada di list agar muncul isinya ya 😉';
 

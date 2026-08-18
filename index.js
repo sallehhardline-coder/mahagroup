@@ -579,6 +579,8 @@ CQ9 Slot`,
 
   '#vipdelay3': 'untuk claim bonus VIP yang masih tahap proses, silakan ditunggu dan cek secara berkala ya, kak. Karena masih dalam tahap pengecekan lebih lanjut. Terima kasih :)',
 
+  '#vipmt': 'fitur VIP masih dalam maintenance hingga waktu yang belum dapat kami pastikan kapan selesainya ya kak. Jadi, untuk sementara waktu tidak ada fitur VIP kak🙏',
+
 };
 
 // Command /start
@@ -654,8 +656,11 @@ let message = '<b>Daftar Hashtag Tersedia:</b>\n\n';
 
 for (const [key, tags] of Object.entries(grouped)) {
   if (tags.length > 0) {
+    // Mengurutkan hashtag sesuai abjad (A-Z) tanpa peduli huruf besar/kecil
+    const sortedTags = tags.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+
     message += `<b>${labels[key]}</b>\n`;
-    message += tags.map(tag => `#${tag.replace(/^#+/, '')}`).join(', ') + '\n\n';
+    message += sortedTags.map(tag => `#${tag.replace(/^#+/, '')}`).join(', ') + '\n\n';
   }
 }
 

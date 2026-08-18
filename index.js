@@ -455,7 +455,33 @@ Selamat mencoba, semoga berhasil kak🙏🏻😊 `,
   '#bahas': 'mohon maaf kakak kami tidak mengerti apa yang kakak maksud 😊 ',
   '#bahas2': `Mohon maaf kakak kami hanya melayani chat seputar kendala deposit, withdraw, atau tidak dapat mengakses website kami 🙂 mohon dipahami ya kak^^ `,
   '#bahas3': 'mohon gunakan kosakata dan tatanan huruf yang benar agar dapat dimengerti kak ^^ ',
+  '#wdantrian1': 'Untuk proses withdraw sedang dalam antrian ya kakak, silahkan untuk ditunggu dan dicek secara berkala pada rekening E-WALLET / BANK yang kakak gunakan ya ^^',
+  '#wdantrian2': 'semua akan kami proses sesuai antrian ya kakak, silahkan untuk ditunggu saja. Terima kasih kak :)',
+  '#wdantrian3': 'Baik kakak, mohon kesabarannya untuk menugggu ya kak. Semua kami proses sesuai dengan antrian ya kak, biasakan untuk menunggu beberapa saat dahulu ya kakak ^^ Terimakasih 😊🙏',
+  '#wdantrian4': 'kami informasikan untuk saat ini proses withdraw kami sedang sangat-sangat ramai&padat ya kak🙏 namun semua withdraw juga sedang dalam proses sesuai antrian ya kak🥰 kami mohon kerjasama dan kesabarannya menunggu proses withdrawnya hingga sukses ya kak🥰 withdraw berapapun pasti kami bayar💸💸💸',
+  '#wdantrian5': 'mohon untuk ditunggu dan dicek secara berkala proses withdrawnya hingga sukses ya kak :) withdraw berapapun pasti kami bayar💸💸💸',
+  '#wddone': `withdraw Anda sudah sukses dan berhasil kami proses ya kak🥰 silakan dicek & refresh pada EWALLET/M-Banking yang Anda gunakan kak😉
+
+Salam Sensational & Terima Kasih ^^`,
+  '#wdcutoff': `Mohon maaf kakak, saat ini Withdraw BANK tujuan BRI & MANDIRI sedang memasuki waktu Cut Off/jam offline transaksi antar BANK dari pihak BANK terkait. Estimasi waktu pukul 04.00 WIB akan normal kembali ya, kak :) Jika sudah melewati jam cut off/offline maka transaksi kakak akan segera kami proses.
+Terima kasih atas pengertiannya, kak. 🙏🏻`,
+  '#wdgagalotomatis': `untuk kendala withdraw ditolak otomatis oleh sistem, sedang dalam pengecekan tim kami ya kak 🙂 kami sarankan untuk mengajukan ulang nanti pagi pukul 04:00 setelah normal ya kak. Mohon maaf atas kendala yang terjadi, dan terima kasih sudah mau mengerti penjelasan kami kak🙏`,
+  '#wdbcamt': `untuk saat ini Withdraw akan diproseskan sesuai antrian ya kak, namun ada keterlambatan dikarenakan saat ini BANK yang digunakan untuk melakukan proses transfer Withdraw yaitu BANK BCA sedang dalam pemeliharaan sistem dari pihak BANK BCA-nya langsung.
+Kami mohon kesabarannya dan menunggu untuk proses Withdraw nya ya, kak ^^`,
+  '#mindepowd': `Untuk Deposit & Minimal Deposit ada 2 Metode pilihan :
+- Auto Bank
+- Transfer Bank
+
+Syarat & Ketentuan
+- Untuk tujuan Deposit AUTO BANK / QRIS minimal Deposit 10.000
+- Untuk tujuan Deposit TRANSFER BANK minimal Deposit 20.000
+
+Untuk penarikan/withdraw
+- Minimal saldo yang bisa diwithdraw sebesar 20.000
+
+Silahkan kakak bisa pilih salah satu metode deposit yang tertera di menu Form Deposit :)`,
   
+
 
 };
 

@@ -501,7 +501,7 @@ bot.command('list', async (ctx) => {
       return ctx.reply('Belum ada hashtag yang terdaftar.');
     }
 
-    // Key internal tanpa emoji biar anti-error
+    // Key internal tanpa emoji
     const grouped = {
       cek: [],
       riwayat: [],
@@ -547,6 +547,7 @@ bot.command('list', async (ctx) => {
       }
     });
 
+    // Susun isi pesan
     let message = '<b>Daftar Hashtag Tersedia:</b>\n\n';
 
     for (const [key, tags] of Object.entries(grouped)) {
@@ -562,13 +563,6 @@ bot.command('list', async (ctx) => {
     ctx.reply('Gagal mengambil daftar hashtag.');
   }
 });
-
-// Jalankan Bot
-bot.launch();
-
-// Enable graceful stop
-process.once('SIGINT', () => bot.stop('SIGINT'));
-process.once('SIGTERM', () => bot.stop('SIGTERM'));
 
     message += 'Ketik #namahashtag atau /namahashtag yang ada di list agar muncul isinya ya 😉';
 

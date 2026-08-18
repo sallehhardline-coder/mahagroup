@@ -455,11 +455,11 @@ Selamat mencoba, semoga berhasil kak🙏🏻😊 `,
   '#bahas': 'mohon maaf kakak kami tidak mengerti apa yang kakak maksud 😊 ',
   '#bahas2': `Mohon maaf kakak kami hanya melayani chat seputar kendala deposit, withdraw, atau tidak dapat mengakses website kami 🙂 mohon dipahami ya kak^^ `,
   '#bahas3': 'mohon gunakan kosakata dan tatanan huruf yang benar agar dapat dimengerti kak ^^ ',
-  '#wdantrian1': 'Untuk proses withdraw sedang dalam antrian ya kakak, silahkan untuk ditunggu dan dicek secara berkala pada rekening E-WALLET / BANK yang kakak gunakan ya ^^',
-  '#wdantrian2': 'semua akan kami proses sesuai antrian ya kakak, silahkan untuk ditunggu saja. Terima kasih kak :)',
-  '#wdantrian3': 'Baik kakak, mohon kesabarannya untuk menugggu ya kak. Semua kami proses sesuai dengan antrian ya kak, biasakan untuk menunggu beberapa saat dahulu ya kakak ^^ Terimakasih 😊🙏',
-  '#wdantrian4': 'kami informasikan untuk saat ini proses withdraw kami sedang sangat-sangat ramai&padat ya kak🙏 namun semua withdraw juga sedang dalam proses sesuai antrian ya kak🥰 kami mohon kerjasama dan kesabarannya menunggu proses withdrawnya hingga sukses ya kak🥰 withdraw berapapun pasti kami bayar💸💸💸',
-  '#wdantrian5': 'mohon untuk ditunggu dan dicek secara berkala proses withdrawnya hingga sukses ya kak :) withdraw berapapun pasti kami bayar💸💸💸',
+  '#wdantri1': 'Untuk proses withdraw sedang dalam antrian ya kakak, silahkan untuk ditunggu dan dicek secara berkala pada rekening E-WALLET / BANK yang kakak gunakan ya ^^',
+  '#wdantri2': 'semua akan kami proses sesuai antrian ya kakak, silahkan untuk ditunggu saja. Terima kasih kak :)',
+  '#wdantri3': 'Baik kakak, mohon kesabarannya untuk menugggu ya kak. Semua kami proses sesuai dengan antrian ya kak, biasakan untuk menunggu beberapa saat dahulu ya kakak ^^ Terimakasih 😊🙏',
+  '#wdantri4': 'kami informasikan untuk saat ini proses withdraw kami sedang sangat-sangat ramai&padat ya kak🙏 namun semua withdraw juga sedang dalam proses sesuai antrian ya kak🥰 kami mohon kerjasama dan kesabarannya menunggu proses withdrawnya hingga sukses ya kak🥰 withdraw berapapun pasti kami bayar💸💸💸',
+  '#wdantri5': 'mohon untuk ditunggu dan dicek secara berkala proses withdrawnya hingga sukses ya kak :) withdraw berapapun pasti kami bayar💸💸💸',
   '#wddone': `withdraw Anda sudah sukses dan berhasil kami proses ya kak🥰 silakan dicek & refresh pada EWALLET/M-Banking yang Anda gunakan kak😉
 
 Salam Sensational & Terima Kasih ^^`,
@@ -519,7 +519,7 @@ bot.command('list', (ctx) => {
         } else if (t.includes('riwayat') || t.includes('rekam')) {
             grouped["📜 Riwayat"].push(tag);
         } else if (t.includes('reset') || t.includes('password') || t.includes('pw')) {
-            grouped["🔄 Reset Account"].push(tag);
+            grouped["🔄 Reset Account & Password"].push(tag);
         } else if (t.includes('promo') || t.includes('selamat')) {
             grouped["🎁 Promo"].push(tag);
         } else if (t.includes('rollingan') || t.includes('freeround')) {

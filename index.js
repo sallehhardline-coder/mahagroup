@@ -450,6 +450,11 @@ Letaknya ada di sini kak: https://prnt.sc/A1EE_g3C10x6 `,
   '#followuptanpabukti': 'silahkan ditunggu saja hingga saldo masuk, karena kami tidak dapat membantu follow up jika tidak ada bukti transaksi secara detail ya kak, terima kasih 🙂 ',
   '#capca': `silahkan masukkan captcha yang tersedia untuk validasi pendaftaran dengan mengikuti angka, huruf besar/kecil yang muncul. Jika salah, tekan refresh di sebelah captcha untuk mengganti captcha yang baru dan masukkan kembali dengan benar.
 Selamat mencoba, semoga berhasil kak🙏🏻😊 `,
+  '#tambahrek': 'tidak bisa ya kak, 1 akun hanya 1 nomor rekening BANK/Ewallet saja kak ^^ ',
+  '#ewalletprem': 'silakan dipremiumkan terlebih dahulu ewallet yang Anda gunakan ya kak, agar mendapatkan limit bulanan yang lebih besar daripada ewallet yang belum premium ^^ ',
+  '#bahas': 'mohon maaf kakak kami tidak mengerti apa yang kakak maksud 😊 ',
+  '#bahas2': `Mohon maaf kakak kami hanya melayani chat seputar kendala deposit, withdraw, atau tidak dapat mengakses website kami 🙂 mohon dipahami ya kak^^ `,
+  '#bahas3': 'mohon gunakan kosakata dan tatanan huruf yang benar agar dapat dimengerti kak ^^ ',
   
 
 };

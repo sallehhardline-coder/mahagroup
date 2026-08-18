@@ -4,6 +4,15 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+  res.send('Bot Telegram aktif!');
+});
+
+app.listen(port, () => {
+  console.log(`Server jalan di port ${port}`);
+});
+
+
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
 // Database Hashtag

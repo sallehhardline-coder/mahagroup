@@ -480,6 +480,7 @@ Untuk penarikan/withdraw
 - Minimal saldo yang bisa diwithdraw sebesar 20.000
 
 Silahkan kakak bisa pilih salah satu metode deposit yang tertera di menu Form Deposit :)`,
+  '#kendalamembaca': 'jika memiliki kendala dalam hal membaca, maka mintalah bantuan orang lain untuk membacakan dan menjelaskannya kepada Anda ya kak ^^ ',
   
 };
 

@@ -341,21 +341,61 @@ bot.start((ctx) => {
 Dibuat oleh @shllwGrave 🗿`);
 });
 
-// Command /list
+// Command /list (Otomatis Grouping dari responses)
 bot.command('list', (ctx) => {
-  const hashtags = Object.keys(responses);
-  
-  if (hashtags.length === 0) {
-    return ctx.reply('Belum ada hashtag yang terdaftar.');
-  }
+    const allHashtags = Object.keys(responses);
 
-  let message = '📋 **Daftar Hashtag Tersedia:**\n\n';
-  hashtags.forEach((tag, index) => {
-    message += `${index + 1}. ${tag}\n`;
-  });
-  message += '\nKetik #namahashtag atau /namahastag yang ada di list agar muncul isinya ya 😉';
+    if (allHashtags.length === 0) {
+        return ctx.reply('Belum ada hashtag yang terdaftar.');
+    }
 
-  ctx.replyWithMarkdown(message);
+    // Template kelompok
+    const grouped = {
+        "🔍 Cek & Kendala": [],
+        "📜 Riwayat": [],
+        "🔄 Reset Account": [],
+        "🎁 Promo": [],
+        "🎰 Rollingan & Freeround": [],
+        "💳 Deposit & QRIS": [],
+        "💸 Withdraw & Transaksi": [],
+        "📌 Lainnya": []
+    };
+
+    // Filter otomatis berdasarkan keyword nama hashtag
+    allHashtags.forEach(tag => {
+        const t = tag.toLowerCase();
+        if (t.includes('cek') || t.includes('kendala') || t.includes('detail') || t.includes('ss')) {
+            grouped["🔍 Cek & Kendala"].push(tag);
+        } else if (t.includes('riwayat') || t.includes('rekam')) {
+            grouped["📜 Riwayat"].push(tag);
+        } else if (t.includes('reset') || t.includes('password') || t.includes('pw')) {
+            grouped["🔄 Reset Account"].push(tag);
+        } else if (t.includes('promo') || t.includes('selamat')) {
+            grouped["🎁 Promo"].push(tag);
+        } else if (t.includes('rollingan') || t.includes('freeround')) {
+            grouped["🎰 Rollingan & Freeround"].push(tag);
+        } else if (t.includes('qris') || t.includes('depo')) {
+            grouped["💳 Deposit & QRIS"].push(tag);
+        } else if (t.includes('wd') || t.includes('format')) {
+            grouped["💸 Withdraw & Transaksi"].push(tag);
+        } else {
+            grouped["📌 Lainnya"].push(tag);
+        }
+    });
+
+    // Susun pesan
+    let message = '📋 **Daftar Hashtag Tersedia:**\n\n';
+
+    for (const [catName, tags] of Object.entries(grouped)) {
+        if (tags.length > 0) {
+            message += `**${catName}**\n`;
+            message += `${tags.join(', ')}\n\n`;
+        }
+    }
+
+    message += 'Ketik #namahashtag atau /namahashtag yang ada di list agar muncul isinya ya 😉';
+
+    ctx.replyWithMarkdown(message);
 });
 
 // Handle teks hashtag dan command slash

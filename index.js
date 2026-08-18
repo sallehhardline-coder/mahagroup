@@ -635,9 +635,6 @@ bot.on('text', (ctx) => {
 });
 
 
-// 🔻 BAGIAN PALING BAWAH FILE (Bawaan bot lo sebelumnya) 🔻
-bot.launch();
-app.listen(port, () => console.log(`Server running on port ${port}`));
 
 // Command /start
 bot.start((ctx) => {

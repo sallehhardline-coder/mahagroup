@@ -1,11 +1,22 @@
 const { Telegraf } = require('telegraf');
 const express = require('express');
-
+const fs = require('fs');
+const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
+const JSON_FILE = path.join(__dirname, 'hashtags.json');
 
+function loadHashtags() {
+  if (!fs.existsSync(JSON_FILE)) return [];
+  const data = fs.readFileSync(JSON_FILE, 'utf8');
+  return JSON.parse(data);
+}
+
+function saveHashtags(hashtags) {
+  fs.writeFileSync(JSON_FILE, JSON.stringify(hashtags, null, 2), 'utf8');
+}
 
 // Database Hashtag
 const responses = {
@@ -582,6 +593,51 @@ CQ9 Slot`,
   '#vipmt': 'fitur VIP masih dalam maintenance hingga waktu yang belum dapat kami pastikan kapan selesainya ya kak. Jadi, untuk sementara waktu tidak ada fitur VIP kak🙏',
 
 };
+
+// 1. Fitur Tambah Hashtag Baru
+bot.command('add', (ctx) => {
+  const args = ctx.message.text.split(' ').slice(1);
+  const input = args.join(' ').trim();
+  if (!input) return ctx.reply('⚠️ Format: /add #hashtagbaru');
+
+  let newTag = input.startsWith('#') ? input : `#${input}`;
+  const hashtags = loadHashtags();
+
+  if (hashtags.some(tag => tag.toLowerCase() === newTag.toLowerCase())) {
+    return ctx.reply(`⚠️ Hashtag ${newTag} udah ada!`);
+  }
+
+  hashtags.push(newTag);
+  saveHashtags(hashtags);
+  return ctx.reply(`✅ Berhasil menambahkan ${newTag}!`);
+});
+
+// 2. Fitur Cari Hashtag (/buk atau #buk)
+bot.on('text', (ctx) => {
+  const text = ctx.message.text.trim();
+  if (text.startsWith('/add')) return;
+
+  if (text.startsWith('/') || text.startsWith('#')) {
+    const keyword = text.replace(/^[/|#]/, '').toLowerCase();
+    if (!keyword) return;
+
+    const hashtags = loadHashtags();
+    const matches = hashtags.filter(tag =>
+      tag.replace('#', '').toLowerCase().startsWith(keyword)
+    );
+
+    if (matches.length > 0) {
+      ctx.reply(`🔎 **Pilihan Hashtag untuk \`${keyword}\`:**\n\n${matches.join(', ')}`, { parse_mode: 'Markdown' });
+    } else {
+      ctx.reply(`❌ Hashtag berawalan \`${keyword}\` tidak ditemukan.`);
+    }
+  }
+});
+
+
+// 🔻 BAGIAN PALING BAWAH FILE (Bawaan bot lo sebelumnya) 🔻
+bot.launch();
+app.listen(port, () => console.log(`Server running on port ${port}`));
 
 // Command /start
 bot.start((ctx) => {

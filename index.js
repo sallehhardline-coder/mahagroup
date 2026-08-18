@@ -12,8 +12,8 @@ app.listen(port, () => {
   console.log(`Server jalan di port ${port}`);
 });
 
-
 const bot = new Telegraf(process.env.BOT_TOKEN);
+
 
 // Database Hashtag
 const responses = {
@@ -23,9 +23,7 @@ const responses = {
   
   '#WDLIMIT': 'Mohon maaf atas kendala yang terjadi ya kak, kami tidak dapat memproses withdraw ke nomor rekening kakak yang terdaftar dikarenakan rekening kakak terindikasi mengalami limit bulanan ya kak',
 
-  '#WDINVALID': `withdraw kakak tidak dapat kami proses karena data rekening terdaftarnya itu INVALID/SALAH/SUDAH TIDAK AKTIF ya kak. Silakan dicek data rekeningya di bagian Detail Bank kak.
-
-Letak "Detail Bank" ada di sini ya kak: https://prnt.sc/yCEvPr5tNW2p`,
+  '#WDINVALID': `withdraw kakak tidak dapat kami proses karena data rekening terdaftarnya itu INVALID/SALAH/SUDAH TIDAK AKTIF ya kak. Silakan dicek data rekeningya di bagian Detail Bank kak.\nLetak "Detail Bank" ada di sini ya kak: https://prnt.sc/yCEvPr5tNW2p`,
 
   '#depobedaBANK': 'bisa ya kak, silahkan transfer sesuai nominal yang tertera pada form deposit ^^ ',
 

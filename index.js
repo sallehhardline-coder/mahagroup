@@ -122,7 +122,7 @@ Untuk PG Soft :
 
 - Pilih "Riwayat"`,
 
-  '#riwayatpp&pop': `Cara melihat riwayat/history permainan terakhir :
+  '#riwayatpp': `Cara melihat riwayat/history permainan terakhir :
 
 Untuk Pragmatic Play / PragmaticPlayPOP :
 
@@ -220,7 +220,8 @@ STATUS : Dalam pengecekan`
 
 // Command /start
 bot.start((ctx) => {
-  ctx.reply('Butuh bantuan hashtag? Ketik /list ya ^^. Dibuat oleh @shllwGrave.');
+  ctx.reply(`Butuh bantuan hashtag? Ketik /list ya ^^. 
+  Dibuat oleh @shllwGrave.`);
 });
 
 // Command /list
@@ -235,7 +236,7 @@ bot.command('list', (ctx) => {
   hashtags.forEach((tag, index) => {
     message += `${index + 1}. ${tag}\n`;
   });
-  message += '\nKetik # atau / sesuai list agar muncul isinya ya!';
+  message += '\nKetik #namahashtag yang ada di list agar muncul isinya ya 😉';
 
   ctx.replyWithMarkdown(message);
 });

@@ -221,7 +221,7 @@ STATUS : Dalam pengecekan`
 // Command /start
 bot.start((ctx) => {
   ctx.reply(`Butuh bantuan hashtag? Ketik /list ya ^^. 
-  Dibuat oleh @shllwGrave.`);
+Dibuat oleh @shllwGrave 🗿`);
 });
 
 // Command /list

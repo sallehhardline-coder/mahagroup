@@ -491,6 +491,10 @@ Silahkan kakak bisa pilih salah satu metode deposit yang tertera di menu Form De
 
   '#marah': `Mohon maaf kak, kami hanya operator yang menghubungkan kaka main di Provider GAME.
 Untuk menang atau kalah itu semua di luar kuasa kami, kami doakan semoga kaka beruntung / hoki di permainan berikutnya ya kak 😊🙏🏻 `,
+
+  '#kasar4': 'tenang saja ya kak, Anda tidak perlu menggunakan kata-kata kasar ^^ karena sejatinya perkataan kasar Anda tidak akan bisa memberikan kemenangan kepada Anda ya kak :)',
+
+  '#kasar5': 'jika Anda mengalammi kekalahan, kami menyarankan untuk tidak emosi dan menggunakan kata-kata kasar ya kak ^^ karena menang/kalah itu tergantung dari hoki Anda sendiri kak, tetap semangat dan semoga mendapatkan kemenangan di permainan berikutnya kak :)',
   
   
 };

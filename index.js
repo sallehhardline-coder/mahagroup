@@ -495,8 +495,90 @@ Untuk menang atau kalah itu semua di luar kuasa kami, kami doakan semoga kaka be
   '#kasar4': 'tenang saja ya kak, Anda tidak perlu menggunakan kata-kata kasar ^^ karena sejatinya perkataan kasar Anda tidak akan bisa memberikan kemenangan kepada Anda ya kak :)',
 
   '#kasar5': 'jika Anda mengalammi kekalahan, kami menyarankan untuk tidak emosi dan menggunakan kata-kata kasar ya kak ^^ karena menang/kalah itu tergantung dari hoki Anda sendiri kak, tetap semangat dan semoga mendapatkan kemenangan di permainan berikutnya kak :)',
-  
-  
+
+  '#vip': `untuk mengclaim lencana VIP kakak harus menyelesaiakan XP yang sudah di tentukan ya kak.
+masing masing lencana memiliki bonus yang berbeda bergantung tingkat lencana saat ini yang kakak capai ya kak^^
+
+Aturan
+XP Multiplier :
+XP Slot : Turnover x 0,1%
+Example = Slot Turnover (1,000,000) x 0,1% = 1,000 XP
+
+XP Untuk Setiap VIP Level :
+Iron
+0 - 3,000 XP
+Copper
+3,000 - 6,000 XP
+Bronze
+6,000 - 12,000 XP
+Silver
+12,000 - 24,000 XP
+Gold
+24,000 - 48,000 XP
+Platinum
+48,000 - 96,000 XP
+Emerald
+96,000 - 192,000 XP
+Aquamarine
+192,000 - 384,000 XP
+Ruby
+384,000 - 768,000 XP
+Diamond
+768,000 - 1,536,000 X`,
+
+  '#vip2': `Pemain VIP dapat menikmati hadiah berdasarkan progres XP, termasuk :
+
+• Putaran Gratis
+
+• Hadiah Uang - Bonus tunai
+
+* Batas Waktu Klaim Hadiah : Hadiah harus diklaim dalam waktu 7 hari setelah setiap musim VIP berakhir. Hadiah yang kedaluwarsa tidak dapat diklaim.
+
+* Batas Waktu Penggunaan Putaran Gratis : Hadiah harus digunakan dalam waktu 7 hari. Hadiah yang kedaluwarsa tidak dapat digunakan.
+
+* Catatan: Untuk Free Spin dari Pragmatic Play, masa berlaku adalah 30 hari setelah diklaim. Silakan merujuk pada tanggal kedaluwarsa yang tertera`,
+
+  '#vip3': `Hanya perputaran permainan dari penyedia berikut yang akan dihitung untuk perhitungan VIP XP Anda. Daftar ini dapat diperbarui dari waktu ke waktu untuk memastikan pengalaman pengguna terbaik.
+
+Pragmatic Play
+PG Soft
+Cosmo Play
+Fat Panda
+FastSpin
+Habanero
+NetEnt
+No Limit City
+Red Tiger
+5G Gaming
+Relax Gaming
+Playstar
+Naga Games
+Advant Play
+Big Time Gaming
+BESOFT
+FunTa Gaming
+Playtech
+Hacksaw
+Evoplay
+568Win
+Spadegaming
+GamePlay
+CQ9 Slot`,
+
+  '#vipclaim': `Bagaimana Cara Klaim Hadiah?
+
+1. Periksa Progres VIP Anda : Kunjungi Halaman VIP untuk melihat level XP Anda saat ini.
+2. Buka Hadiah : Capai puncak setiap tingkatan untuk mengklaim bonus eksklusif.
+3. Klaim Hadiah Anda :
+• Bonus akan tersedia untuk klaim manual di Halaman VIP.
+• Atau, kunjungi Halaman Bonus untuk melihat dan mengklaim hadiah yang telah dibuka.`,
+
+  '#vipdelay': 'untuk bonus VIP yang masih dalam proses silahkan untuk menunggu sambil bermain ya kaka untuk bonus akan di berikan disaat kaka sedang bermain ya kaka sebelum mendapatkan bonusnya akan ada notifukasi khusunya ya kaka',
+
+  '#vipdelay2': 'semua proses claim hadiah lencana VIP saat ini sedang ada delay ya kakak, dan kendala tersebut sedang dalam penanganan lebih lanjut kak. Silakan bisa cek secara berkala, untuk estimasi belum bisa dipastikan dikarenakan langsung dari sistem ya kak 🙂 mohon maaf atas ketidak nyamanannya ya kak 🙂🙏',
+
+  '#vipdelay3': 'untuk claim bonus VIP yang masih tahap proses, silakan ditunggu dan cek secara berkala ya, kak. Karena masih dalam tahap pengecekan lebih lanjut. Terima kasih :)',
+
 };
 
 // Command /start
@@ -519,63 +601,67 @@ bot.command('list', async (ctx) => {
 
     // Key internal tanpa emoji
     const grouped = {
-      cek: [],
-      riwayat: [],
-      reset: [],
-      promo: [],
-      rollingan: [],
-      deposit: [],
-      withdraw: [],
-      lainnya: []
-    };
+  cek: [],
+  riwayat: [],
+  reset: [],
+  promo: [],
+  vip: [],
+  rollingan: [],
+  deposit: [],
+  withdraw: [],
+  lainnya: []
+};
 
-    // Label tampilan untuk Telegram
-    const labels = {
-      cek: "🔍 Cek & Kendala",
-      riwayat: "📜 Riwayat",
-      reset: "🔄 Reset Account & Password",
-      promo: "🎁 Promo",
-      rollingan: "🎰 Rollingan & Freeround",
-      deposit: "💳 Deposit & QRIS",
-      withdraw: "💸 Withdraw & Transaksi",
-      lainnya: "📌 Lainnya"
-    };
+// Label tampilan untuk Telegram
+const labels = {
+  cek: "🔍 Cek & Kendala",
+  riwayat: "📜 Riwayat",
+  reset: "🗝️ Reset Account & Password",
+  promo: "🎁 Promo",
+  vip: "👑 VIP",
+  rollingan: "🎰 Rollingan & Freeround",
+  deposit: "💳 Deposit & QRIS",
+  withdraw: "💸 Withdraw & Transaksi",
+  lainnya: "📌 Lainnya"
+};
 
-    // Filter hashtag berdasarkan keyword
-    allHashtags.forEach(tag => {
-      const t = tag.toLowerCase();
-      if (t.includes('cek') || t.includes('kendala') || t.includes('detail') || t.includes('ss')) {
-        grouped.cek.push(tag);
-      } else if (t.includes('riwayat') || t.includes('rekam')) {
-        grouped.riwayat.push(tag);
-      } else if (t.includes('reset') || t.includes('password') || t.includes('pw')) {
-        grouped.reset.push(tag);
-      } else if (t.includes('promo') || t.includes('selamat')) {
-        grouped.promo.push(tag);
-      } else if (t.includes('rollingan') || t.includes('freeround')) {
-        grouped.rollingan.push(tag);
-      } else if (t.includes('qris') || t.includes('depo')) {
-        grouped.deposit.push(tag);
-      } else if (t.includes('wd') || t.includes('format')) {
-        grouped.withdraw.push(tag);
-      } else {
-        grouped.lainnya.push(tag);
-      }
-    });
+// Filter hashtag berdasarkan keyword
+allHashtags.forEach(tag => {
+  const t = tag.toLowerCase();
+  if (t.includes('cek') || t.includes('kendala') || t.includes('detail') || t.includes('ss')) {
+    grouped.cek.push(tag);
+  } else if (t.includes('riwayat') || t.includes('rekam')) {
+    grouped.riwayat.push(tag);
+  } else if (t.includes('reset') || t.includes('password') || t.includes('pw')) {
+    grouped.reset.push(tag);
+  } else if (t.includes('promo') || t.includes('selamat')) {
+    grouped.promo.push(tag);
+  } else if (t.includes('vip')) {
+    grouped.vip.push(tag);
+  } else if (t.includes('rollingan') || t.includes('freeround')) {
+    grouped.rollingan.push(tag);
+  } else if (t.includes('qris') || t.includes('depo')) {
+    grouped.deposit.push(tag);
+  } else if (t.includes('wd') || t.includes('format')) {
+    grouped.withdraw.push(tag);
+  } else {
+    grouped.lainnya.push(tag);
+  }
+});
 
-   // Susun isi pesan
-    let message = '<b>Daftar Hashtag Tersedia:</b>\n\n';
+// Susun isi pesan
+let message = '<b>Daftar Hashtag Tersedia:</b>\n\n';
 
-    for (const [key, tags] of Object.entries(grouped)) {
-      if (tags.length > 0) {
-        message += `<b>${labels[key]}</b>\n`;
-        message += tags.map(tag => `#${tag.replace(/^#+/, '')}`).join(', ') + '\n\n';
-      }
-    }
+for (const [key, tags] of Object.entries(grouped)) {
+  if (tags.length > 0) {
+    message += `<b>${labels[key]}</b>\n`;
+    message += tags.map(tag => `#${tag.replace(/^#+/, '')}`).join(', ') + '\n\n';
+  }
+}
 
-    message += 'Ketik #namahashtag atau /namahashtag yang ada di list agar muncul isinya ya 😉';
+message += 'Ketik #namahashtag atau /namahashtag yang ada di list agar muncul isinya ya 🤩';
 
-    await ctx.reply(message, { parse_mode: 'HTML' });
+await ctx.reply(message, { parse_mode: 'HTML' });
   } catch (error) {
     console.error('Error pada command /list:', error);
     ctx.reply('Gagal mengambil daftar hashtag.');

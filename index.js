@@ -4,40 +4,34 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.send('Bot Telegram aktif!');
-});
-
-app.listen(port, () => {
-  console.log(`Server jalan di port ${port}`);
-});
-
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
 
 // Database Hashtag
 const responses = {
-  '#cancelWDDONE': 'proses pembatalan withdraw telah selesai kak, dan saldo sudah kami kembalikan ke dompet utama ya kakak. Silakan dicek kembali kak^^',
+  '#cancelwddone': 'proses pembatalan withdraw telah selesai kak, dan saldo sudah kami kembalikan ke dompet utama ya kakak. Silakan dicek kembali kak^^',
   
-  '#ajukanULANGWD': 'withdraw kakak sudah kami cancel ya, silakan ajukan ulang withdrawnya kak :)',
+  '#ajukanulangwd': 'withdraw kakak sudah kami cancel ya, silakan ajukan ulang withdrawnya kak :)',
   
-  '#WDLIMIT': 'Mohon maaf atas kendala yang terjadi ya kak, kami tidak dapat memproses withdraw ke nomor rekening kakak yang terdaftar dikarenakan rekening kakak terindikasi mengalami limit bulanan ya kak',
+  '#reklimit': 'Mohon maaf atas kendala yang terjadi ya kak, kami tidak dapat memproses withdraw ke nomor rekening kakak yang terdaftar dikarenakan rekening kakak terindikasi mengalami limit bulanan ya kak',
 
-  '#WDINVALID': `withdraw kakak tidak dapat kami proses karena data rekening terdaftarnya itu INVALID/SALAH/SUDAH TIDAK AKTIF ya kak. Silakan dicek data rekeningya di bagian Detail Bank kak.\nLetak "Detail Bank" ada di sini ya kak: https://prnt.sc/yCEvPr5tNW2p`,
+  '#rekinvalid': `withdraw kakak tidak dapat kami proses karena data rekening terdaftarnya itu INVALID/SALAH/SUDAH TIDAK AKTIF ya kak. Silakan dicek data rekeningya di bagian Detail Bank kak.
+  
+  Letak "Detail Bank" ada di sini ya kak: https://prnt.sc/yCEvPr5tNW2p`,
 
-  '#depobedaBANK': 'bisa ya kak, silahkan transfer sesuai nominal yang tertera pada form deposit ^^ ',
+  '#depobedabank': 'bisa ya kak, silahkan transfer sesuai nominal yang tertera pada form deposit ^^ ',
 
   '#depomasihproses': 'untuk bukti transfer yang masih dalam keterangan "Pembayaran Diproses / Transaksi sedang diproses / Pembayaran Tertunda" mohon ditunggu dan dicek secara berkala pada M-Banking/Ewallet yang kakak gunakan hingga transaksi tersebut berhasil ya kak',
 
   '#depotanpabukti': 'baik kakak, silakan ditunggu saja saldonya hingga masuk ke akun, jika kakak tidak dapat mengirimkan bukti transfernya ya^^',
 
-  '#depoWD': 'Mohon maaf kakak, setelah kami cek kakak belum melakukan permainan dan langsung mengajukan withdraw, silahkan lanjut bermain ya kakak, untuk ketetapan di situs kami wajib bermain 1x TO deposit = sesuai nominal deposit Anda terlebih dahulu kak 🙂 ',
+  '#depowd': 'Mohon maaf kakak, setelah kami cek kakak belum melakukan permainan dan langsung mengajukan withdraw, silahkan lanjut bermain ya kakak, untuk ketetapan di situs kami wajib bermain 1x TO deposit = sesuai nominal deposit Anda terlebih dahulu kak 🙂 ',
 
   '#bukti': 'bisa dibantu kirimkan bukti transfernya kak? ^^  ',
 
   '#buktidetail': 'dibantu kirimkan screenshoot bukti transfernya dan perlihatkan detail transaksi nya secara full yang menunjukkan waktu, tanggal, status transaksi, dan RRN/REF ya kakak ^^ ',
 
-  '#buktidetailBNI': `Bukti detail BNI
+  '#buktidetailbni': `Bukti detail BNI
 -Riwayat
 -Bukti transaksi
 -Pilih jenis (semua atau trasnfer)
@@ -45,7 +39,7 @@ const responses = {
 -Klik selanjutnya 
 lalu cari mutasi yang di tujukan ke kami ya kakak `,
 
-  '#buktiQRISBCA': `cara lihat bukti transfer via QRIS pada M-Banking BCA:
+  '#buktiqrisbca': `cara lihat bukti transfer via QRIS pada M-Banking BCA:
 
 -klik icon QRIS pada M-Banking BCA
 -pergi ke INBOX
@@ -53,7 +47,7 @@ lalu cari mutasi yang di tujukan ke kami ya kakak `,
 
 silahkan dicoba dan kami tunggu bukti transfer detailnya kak ^^ `,
 
-  '#buktiQRISBRI': `Melalui Aplikasi BRImo 
+  '#buktiqrisbri': `Melalui Aplikasi BRImo 
 
 -Buka aplikasi BRImo: dan lakukan login menggunakan username/password atau fingerprint. 
 
@@ -61,7 +55,7 @@ silahkan dicoba dan kami tunggu bukti transfer detailnya kak ^^ `,
  
 -Pilih bukti transfer: yang ingin Anda lihat dan lakukan tangkapan layar (screenshot) untuk menyimpannya. `,
 
-  '#buktiQRISMANDIRI': `Berikut langkah-langkah lengkapnya:
+  '#buktiqrismandiri': `Berikut langkah-langkah lengkapnya:
 
 -Buka aplikasi Livin' by Mandiri: Login dengan username dan PIN Anda. 
 -Pilih "QR Terima Transfer": Anda akan menemukan fitur ini di halaman beranda aplikasi. 
@@ -92,13 +86,13 @@ CARA LIHAT BUKTI TRANSFER QRIS MANDIRI:
 
   '#unlocktidakbisa': 'mohon maaf kakak, kami memang tidak memiliki akses untuk unlock promo yang kakak claim ya kakak. Karena TO/TurnOvernya sudah terhitung otomatis ya kakak, dan akan ter-unlock secara otomatis juga ya kakak ^^ ',
 
-  '#SSkendala': 'bisa dibantu untuk mengirimkan screenshot/rekam layar kendala yang kakak alami saat ini kak? ^^ ',
+  '#sskendala': 'bisa dibantu untuk mengirimkan screenshot/rekam layar kendala yang kakak alami saat ini kak? ^^ ',
 
-  '#SSrekening': 'silakan kirimkan screenshot yang menampilkan nama & nomor rekening BANK/Ewallet pada apikasi BANK/Ewallet-nya kak ', 
+  '#ssrekening': 'silakan kirimkan screenshot yang menampilkan nama & nomor rekening BANK/Ewallet pada apikasi BANK/Ewallet-nya kak ', 
 
-  '#SSriwayatpermainan': 'dibantu kirimkan screenshoot riwayat permainan/bettingannya yang ada di dalam game ya kak ',
+  '#ssriwayatpermainan': 'dibantu kirimkan screenshoot riwayat permainan/bettingannya yang ada di dalam game ya kak ',
 
-  '#riwayatCOSMO': `Cara melihat riwayat/history permainan terakhir :
+  '#riwayatcosmo': `Cara melihat riwayat/history permainan terakhir :
 
 Untuk Cosmo Play :
 
@@ -108,7 +102,7 @@ Untuk Cosmo Play :
 
 - Pilih "Riwayat" `,
 
-  '#riwayatNLC': `Cara melihat riwayat/history permainan terakhir :
+  '#riwayatnlc': `Cara melihat riwayat/history permainan terakhir :
 
 Untuk No Limit City :
 
@@ -118,7 +112,7 @@ Untuk No Limit City :
 
 - Pilih riwayat permainan `,
 
-  '#riwayatPG': `Cara melihat riwayat/history permainan terakhir :
+  '#riwayatpg': `Cara melihat riwayat/history permainan terakhir :
 
 Untuk PG Soft :
 
@@ -128,7 +122,7 @@ Untuk PG Soft :
 
 - Pilih "Riwayat"`,
 
-  '#riwayatPPdanPOP': `Cara melihat riwayat/history permainan terakhir :
+  '#riwayatpp&pop': `Cara melihat riwayat/history permainan terakhir :
 
 Untuk Pragmatic Play / PragmaticPlayPOP :
 
@@ -140,7 +134,7 @@ Untuk Pragmatic Play / PragmaticPlayPOP :
 
 - Pilih "RIWAYAT PERMAINAN" `,
 
-  '#riwayatTOGEL':`Berikut langkah-langkah cek riwayat taruhan TOGEL :
+  '#riwayattogel':`Berikut langkah-langkah cek riwayat taruhan TOGEL :
 
 - KLIK menu Togel
 - Pilih salah satu NEGARA, Misalkan Sidney
@@ -151,22 +145,22 @@ Untuk Pragmatic Play / PragmaticPlayPOP :
 Setelah mengikuti langkah-langkah di atas otomatis akan menampilkan riwayat taruhan
 yang sebelumnya sudah di pasang `,
 
-  '#resetBEDANAMA': 'mohon maaf kak, kami tidak dapat membantu reset data rekening jika nama terupdate/terbarunya itu berbeda dengan nama yang terdaftar ya, kak ',
+  '#resetbedanama': 'mohon maaf kak, kami tidak dapat membantu reset data rekening jika nama terupdate/terbarunya itu berbeda dengan nama yang terdaftar ya, kak ',
 
-  '#resetBEDATUJUAN': 'mohon maaf kak, kami tidak dapat membantu reset data rekening jika tujuan BANK terupdate/terbarunya itu berbeda dengan tujuan BANK yang terdaftar ya, kak ',
+  '#resetbedatujuan': 'mohon maaf kak, kami tidak dapat membantu reset data rekening jika tujuan BANK terupdate/terbarunya itu berbeda dengan tujuan BANK yang terdaftar ya, kak ',
 
-  '#resetDITOLAK': `reset ditolak, nomor __ sudah terdaftar pada ID __
+  '#resetditolak': `reset ditolak, nomor __ sudah terdaftar pada ID __
 Saldo pada ID __ tidak dapat kami proses withdrawnya, akun sudah tidak dapat kami reset data rekeningnya, dan saldo hanya bisa dimainkan saja kak `,
 
-  '#resetDITOLAK2': 'reset ditolak, karena nomor rekening terdaftarnya masih aktif ya kak. Withdraw akan tetap kami proses ke data rekening terdaftar kak 🙂 ',
+  '#resetditolak2': 'reset ditolak, karena nomor rekening terdaftarnya masih aktif ya kak. Withdraw akan tetap kami proses ke data rekening terdaftar kak 🙂 ',
 
-  '#resetDITOLAK3': 'tidak ada saldo pada ID tersebut ya kak, tidak bisa kami reset data rekeningnya. Silakan membuat akun baru saja kak, menggunakan data rekening yang benar  🙂 ',
+  '#resetditolak3': 'tidak ada saldo pada ID tersebut ya kak, tidak bisa kami reset data rekeningnya. Silakan membuat akun baru saja kak, menggunakan data rekening yang benar  🙂 ',
 
-  '#resetLIMIT': 'untuk kendala rekening ewallet limit, tidak bisa direset rekening ya, kak. Jadi, silahkan ditunggu hingga pergantian bulan agar limitnya tereset otomatis oleh pihak ewallet yang kakak gunakan ya kak 🙂 ',
+  '#resetlimit': 'untuk kendala rekening ewallet limit, tidak bisa direset rekening ya, kak. Jadi, silahkan ditunggu hingga pergantian bulan agar limitnya tereset otomatis oleh pihak ewallet yang kakak gunakan ya kak 🙂 ',
 
-  '#cancelDGABISA': 'mohon maaf ya kak, tidak bisa untuk membatalkan withdrawnya 🙂 Silakan ditunggu saja proses withdrawnya selesai, dan saldonya masuk ke rekening yang sudah kakak daftarkan di situs kami ^^ ',
+  '#cancelwdgabisa': 'mohon maaf ya kak, tidak bisa untuk membatalkan withdrawnya 🙂 Silakan ditunggu saja proses withdrawnya selesai, dan saldonya masuk ke rekening yang sudah kakak daftarkan di situs kami ^^ ',
 
-  '#cancelWDPROSES': 'baik kakak, mohon untuk ditunggu proses pembatalan/cancel withdrawnya ya 🙂 ',
+  '#cancelwdproses': 'baik kakak, mohon untuk ditunggu proses pembatalan/cancel withdrawnya ya 🙂 ',
 
   '#kendala': 'hallo kakak, selamat datang di website kami^^ bisa dibantu jelaskan kendalanya? Agar dapat kami bantu ^^',
   
@@ -174,9 +168,9 @@ Saldo pada ID __ tidak dapat kami proses withdrawnya, akun sudah tidak dapat kam
 
   '#isiformat': 'silakan disalin dan diisi formatnya dengan benar dan sesuai dengan yang kami kirimkan ya kak',
 
-  '#hubungiPUSATRESET': 'silakan hubungi Pusat Reset Password melalui link yang kami berikan di atas ya kak. Akan dibantu oleh tim kami untuk kendala lupa password yang kakak alami. Terima kasih kakak :)',
+  '#hubungipusatreset': 'silakan hubungi Pusat Reset Password melalui link yang kami berikan di atas ya kak. Akan dibantu oleh tim kami untuk kendala lupa password yang kakak alami. Terima kasih kakak :)',
 
-  '#PUSATRESETPW': `Halo Kakak,
+  '#pusatresetpw': `Halo Kakak,
 
 Terkait kendala lupa password, silakan gunakan fitur Lupa Password yang tersedia di beranda situs kami.
 
@@ -190,7 +184,7 @@ https://customer.customersupportdesk.ai/chat?workspaceId=019bfd25-bb3c-71b1-83d6
 Whatsapp: https://wa.me/+94762388938
 Telegram: https://t.me/MAHAGRUP`,
 
-  '#FORMATRESETBANK': `WEB : 
+  '#formatresetbank': `WEB : 
 User ID : 
 Nama Yang Terdaftar : 
 Nama Yang Terupdate : 
@@ -201,7 +195,7 @@ BANK Terupdate :
 SALDO : 
 ALASAN : `,
 
-  '#CARAISIFORMATRESET': `WEB : diisi nama web/situs kami
+  '#caraisiformatreset': `WEB : diisi nama web/situs kami
 User ID : diisi ID/username untuk login
 Nama Yang Terdaftar : diisi nama rekening terdaftar di web/situs kami
 Nama Yang Terupdate : diisi nama rekening yang benar sesuai KTP Anda
@@ -212,7 +206,7 @@ BANK Terupdate : diisi tujuan BANK WD yang benar
 SALDO : diisi dengan saldo di akun game
 ALASAN : biarkan kami yang isi kak`,
 
-  '#FORMATQRISPENDING': `FORMAT QRIS PENDING
+  '#formatqrispending': `FORMAT QRIS PENDING
 
 WEB : 
 USER NAME : 

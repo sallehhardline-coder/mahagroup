@@ -101,7 +101,7 @@ Untuk Cosmo Play :
 
 - Pilih "Riwayat" `,
 
-  'riwayatNLC': `Cara melihat riwayat/history permainan terakhir :
+  '#riwayatNLC': `Cara melihat riwayat/history permainan terakhir :
 
 Untuk No Limit City :
 
@@ -121,7 +121,7 @@ Untuk PG Soft :
 
 - Pilih "Riwayat"`,
 
-  '#riwayatPragmatic/POP': `Cara melihat riwayat/history permainan terakhir :
+  '#riwayatPPdanPOP': `Cara melihat riwayat/history permainan terakhir :
 
 Untuk Pragmatic Play / PragmaticPlayPOP :
 
@@ -133,7 +133,7 @@ Untuk Pragmatic Play / PragmaticPlayPOP :
 
 - Pilih "RIWAYAT PERMAINAN" `,
 
-  'riwayatTOGEL':`Berikut langkah-langkah cek riwayat taruhan TOGEL :
+  '#riwayatTOGEL':`Berikut langkah-langkah cek riwayat taruhan TOGEL :
 
 - KLIK menu Togel
 - Pilih salah satu NEGARA, Misalkan Sidney

@@ -216,12 +216,12 @@ NOMOR REFF / RRN :
 RRN QRIS : 
 TUJUAN TRANSAKSI : 
 STATUS : Dalam pengecekan`,
-  '#donedeposit': `Permintaan deposit kakak sudah kami bantu proseskan ya. Silahkan di cek kembali saldo di dompet utamanya.
+  '#donedepo': `Permintaan deposit kakak sudah kami bantu proseskan ya. Silahkan di cek kembali saldo di dompet utamanya.
 
 Mohon selalu check terlebih dahulu untuk nomor tujuan rekening deposit kami yang aktif sebelum melakukan transfer saldo ya kak, dikarnakan nomor tujuan rekening deposit bisa berubah sewaktu waktu^^ 
 
 Selamat bermain dan kami doakan jackpot 🙏🏻❤️ `,
-  '#donedepoqris': `untuk deposit QRIS kakak sudah berhasil diproses ya kak, silahkan dicek dan di-refresh kembali dompet utama ya kak 🙂
+  '#doneqris': `untuk deposit QRIS kakak sudah berhasil diproses ya kak, silahkan dicek dan di-refresh kembali dompet utama ya kak 🙂
 
 selamat bermain & semoga jackpot^^ `,
   '#doneresetbank': `Hallo kaka, pengajuan RESET AKUN sudah kita bantu reset ya

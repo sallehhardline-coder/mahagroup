@@ -553,7 +553,7 @@ bot.command('list', async (ctx) => {
     for (const [key, tags] of Object.entries(grouped)) {
       if (tags.length > 0) {
         message += `<b>${labels[key]}</b>\n`;
-        message += tags.map(tag => `#${tag}`).join(', ') + '\n\n';
+        message += tags.map(tag => `#${tag.replace(/^#+/, '')}`).join(', ') + '\n\n';
       }
     }
 

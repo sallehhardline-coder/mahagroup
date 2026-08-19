@@ -597,62 +597,86 @@ CQ9 Slot`,
 
 };
 
-// 1. Fitur Tambah Hashtag Baru
-bot.command('add', (ctx) => {
-  const args = ctx.message.text.split(' ').slice(1);
-  const input = args.join(' ').trim();
-  if (!input) return ctx.reply('⚠️ Format: /add #hashtagbaru');
+// 1. FITUR TAMBAH HASHTAG BARU
+bot.command('add', async (ctx) => {
+  try {
+    const args = ctx.message.text.split(' ').slice(1);
+    const input = args.join(' ').trim();
+    if (!input) return ctx.reply('⚠️ Format: /add #hashtagbaru');
 
-  let newTag = input.startsWith('#') ? input : `#${input}`;
-  const hashtags = loadHashtags();
+    let newTag = input.startsWith('#') ? input : `#${input}`;
 
-  if (hashtags.some(tag => tag.toLowerCase() === newTag.toLowerCase())) {
-    return ctx.reply(`⚠️ Hashtag ${newTag} udah ada!`);
+    ctx.reply('⏳ Sedang menyimpan...');
+
+    // Ambil data hashtag (Aman untuk Array lokal maupun Objek GitHub)
+    const res = await loadHashtags();
+    let hashtags = [];
+    let sha = null;
+
+    if (Array.isArray(res)) {
+      hashtags = res;
+    } else if (res && res.hashtags) {
+      hashtags = res.hashtags;
+      sha = res.sha;
+    }
+
+    if (hashtags.some(tag => tag.toLowerCase() === newTag.toLowerCase())) {
+      return ctx.reply(`⚠️ Hashtag ${newTag} udah ada!`);
+    }
+
+    hashtags.push(newTag);
+
+    // Simpan data
+    await saveHashtags(hashtags, sha);
+    return ctx.reply(`✅ Berhasil menambahkan ${newTag}!`);
+  } catch (err) {
+    console.error('❌ Error di /add:', err.message);
+    return ctx.reply('❌ Gagal menambahkan hashtag. Terjadi kesalahan.');
   }
-
-  hashtags.push(newTag);
-  saveHashtags(hashtags);
-  return ctx.reply(`✅ Berhasil menambahkan ${newTag}!`);
 });
 
 // 📌 FITUR CARI HASHTAG & RESPONS PESAN
 bot.on('text', async (ctx, next) => {
-  const text = ctx.message.text.trim();
+  try {
+    const text = ctx.message.text.trim();
 
-  // Abaikan perintah sistem utama biar gak dibaca sebagai hashtag!
-  if (text.startsWith('/start') || text.startsWith('/list') || text.startsWith('/add')) {
-    return next();
-  }
-
-  // Normalisasi teks (misal: /wdcekmutasi -> #wdcekmutasi)
-  let cleanTag = text;
-  if (text.startsWith('/')) {
-    cleanTag = '#' + text.slice(1);
-  }
-
-  // 1. CEK DULU: Apakah ada isi pesan di objek responses?
-  if (typeof responses !== 'undefined' && responses[cleanTag]) {
-    return ctx.reply(responses[cleanTag], { parse_mode: 'Markdown' });
-  }
-
-  // 2. JIKA TIDAK ADA RESPONS: Lakukan pencarian list hashtag
-  if (text.startsWith('/') || text.startsWith('#')) {
-    const keyword = text.replace(/^[/|#]/, '').toLowerCase();
-    if (!keyword) return;
-
-    // Ambil data hashtag (Aman untuk Array lokal maupun Objek GitHub)
-    const rawData = await loadHashtags();
-    const hashtags = Array.isArray(rawData) ? rawData : (rawData.hashtags || []);
-
-    const matches = hashtags.filter(tag =>
-      tag.replace('#', '').toLowerCase().startsWith(keyword)
-    );
-
-    if (matches.length > 0) {
-      return ctx.reply(`🔎 **Pilihan Hashtag untuk \`${keyword}\`:**\n\n${matches.join(', ')}`, { parse_mode: 'Markdown' });
-    } else {
-      return ctx.reply(`❌ Hashtag atau perintah \`${text}\` tidak ditemukan.`);
+    // Abaikan perintah sistem utama biar gak dibaca sebagai hashtag!
+    if (text.startsWith('/start') || text.startsWith('/list') || text.startsWith('/add')) {
+      return next();
     }
+
+    // Normalisasi teks (misal: /wdcekmutasi -> #wdcekmutasi)
+    let cleanTag = text;
+    if (text.startsWith('/')) {
+      cleanTag = '#' + text.slice(1);
+    }
+
+    // 1. CEK DULU: Apakah ada isi pesan di objek responses?
+    if (typeof responses !== 'undefined' && responses && responses[cleanTag]) {
+      return ctx.reply(responses[cleanTag], { parse_mode: 'Markdown' });
+    }
+
+    // 2. JIKA TIDAK ADA RESPONS: Lakukan pencarian list hashtag
+    if (text.startsWith('/') || text.startsWith('#')) {
+      const keyword = text.replace(/^[/|#]/, '').toLowerCase();
+      if (!keyword) return;
+
+      // Ambil data hashtag
+      const rawData = await loadHashtags();
+      const hashtags = Array.isArray(rawData) ? rawData : (rawData && rawData.hashtags ? rawData.hashtags : []);
+
+      const matches = hashtags.filter(tag =>
+        tag.replace('#', '').toLowerCase().startsWith(keyword)
+      );
+
+      if (matches.length > 0) {
+        return ctx.reply(`🔎 **Pilihan Hashtag untuk \`${keyword}\`:**\n\n${matches.join(', ')}`, { parse_mode: 'Markdown' });
+      } else {
+        return ctx.reply(`❌ Hashtag atau perintah \`${text}\` tidak ditemukan.`);
+      }
+    }
+  } catch (err) {
+    console.error('❌ Error di text handler:', err.message);
   }
 });
 

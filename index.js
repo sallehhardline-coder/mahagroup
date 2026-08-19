@@ -640,8 +640,9 @@ bot.on('text', async (ctx, next) => {
     const keyword = text.replace(/^[/|#]/, '').toLowerCase();
     if (!keyword) return;
 
-    // Ambil data live dari GitHub
-    const { hashtags } = await loadHashtags();
+    // Ambil data hashtag (Aman untuk Array lokal maupun Objek GitHub)
+    const rawData = await loadHashtags();
+    const hashtags = Array.isArray(rawData) ? rawData : (rawData.hashtags || []);
 
     const matches = hashtags.filter(tag =>
       tag.replace('#', '').toLowerCase().startsWith(keyword)

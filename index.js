@@ -634,6 +634,28 @@ bot.command('add', async (ctx) => {
     return ctx.reply('❌ Gagal menambahkan hashtag. Terjadi kesalahan.');
   }
 });
+// 📌 FITUR TAMPILKAN LIST HASHTAG
+bot.command('list', async (ctx) => {
+  try {
+    // Mengambil semua kunci hashtag dari object responses di foto pertama kamu
+    const listHashtag = Object.keys(responses).join(' ');
+    
+    let pesan = `<b>Daftar Hashtag Tersedia:</b>\n\n${listHashtag}`;
+
+    // Kalau teksnya lebih dari 3500 karakter, bakal dipotong otomatis biar gak di-reject Telegram
+    if (pesan.length > 3500) {
+      const chunks = pesan.match(/[\s\S]{1,3500}/g) || [];
+      for (const chunk of chunks) {
+        await ctx.reply(chunk, { parse_mode: 'HTML' });
+      }
+    } else {
+      await ctx.reply(pesan, { parse_mode: 'HTML' });
+    }
+  } catch (err) {
+    console.error("Error di /list:", err.message);
+    ctx.reply("❌ Gagal menampilkan list hashtag.");
+  }
+});
 
 // 📌 FITUR CARI HASHTAG & RESPONS PESAN
 bot.on('text', async (ctx, next) => {

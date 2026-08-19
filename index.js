@@ -720,92 +720,89 @@ bot.command('list', async (ctx) => {
       return ctx.reply('Belum ada hashtag yang terdaftar.');
     }
 
-    // Inisialisasi pengelompokan hashtag
-const grouped = {
-  cek: [],
-  riwayat: [],
-  reset: [],
-  promo: [],
-  vip: [],
-  rollingan: [],
-  deposit: [],
-  withdraw: [],
-  
-  // Kategori Baru
-  estimasi: [],
-  clear: [],
-  baca: [],
-  bahas: [],
-  followup: [],
-  kasar: [],
-  kalibrasi: [],
-  tutorial: [],
-  
-  lainnya: []
-};
+      // Inisialisasi pengelompokan hashtag
+  const grouped = {
+    cek: [],
+    riwayat: [],
+    reset: [],
+    promo: [],
+    vip: [],
+    rollingan: [],
+    deposit: [],
+    withdraw: [],
+    estimasi: [],
+    clear: [],
+    baca: [],
+    bahas: [],
+    followup: [],
+    kasar: [],
+    kalibrasi: [],
+    tutorial: [],
+    lainnya: []
+  };
 
-// Label tampilan untuk Telegram
-const labels = {
-  cek: "🔍 Cek & Kendala",
-  riwayat: "📜 Riwayat",
-  reset: "🔑 Reset Account & Password",
-  promo: "🎁 Promo",
-  vip: "👑 VIP",
-  rollingan: "🎰 Rollingan & Freeround",
-  deposit: "💳 Deposit & QRIS",
-  withdraw: "💸 Withdraw & Transaksi",
-  estimasi: "⏳ Estimasi",
-  clear: "🧹 Clear Cache",
-  baca: "📖 Baca",
-  bahas: "💬 Bahas",
-  followup: "🔄 Follow Up",
-  kasar: "⚠️ Kata Kasar & Marah",
-  kalibrasi: "⚙️ Kalibrasi",
-  tutorial: "📚 Tutorial & Cara",
-  
-  lainnya: "📌 Lainnya"
-};
+  // Label tampilan untuk Telegram
+  const labels = {
+    cek: "🔍 Cek & Kendala",
+    riwayat: "📜 Riwayat",
+    reset: "🔑 Reset Account & Password",
+    promo: "🎁 Promo",
+    vip: "👑 VIP",
+    rollingan: "🎰 Rollingan & Freeround",
+    deposit: "💳 Deposit & QRIS",
+    withdraw: "💸 Withdraw & Transaksi",
+    estimasi: "⏳ Estimasi",
+    clear: "🧹 Clear Cache",
+    baca: "📖 Baca",
+    bahas: "💬 Bahas",
+    followup: "🔄 Follow Up",
+    kasar: "⚠️ Kata Kasar & Marah",
+    kalibrasi: "⚙️ Kalibrasi",
+    tutorial: "📚 Tutorial & Cara",
+    lainnya: "📌 Lainnya"
+  };
 
-// Filter hashtag berdasarkan keyword
-allHashtags.forEach(tag => {
-  const t = tag.toLowerCase();
+  // Filter hashtag berdasarkan keyword
+  allHashtags.forEach(tag => {
+    const t = tag.toLowerCase();
 
-  if (t.includes('cek') || t.includes('kendala')) {
-    grouped.cek.push(tag);
-  } else if (t.includes('riwayat') || t.includes('re')) {
-    grouped.riwayat.push(tag);
-  } else if (t.includes('reset') || t.includes('pass')) {
-    grouped.reset.push(tag);
-  } else if (t.includes('promo') || t.includes('sela')) {
-    grouped.promo.push(tag);
-  } else if (t.includes('vip')) {
-    grouped.vip.push(tag);
-  } else if (t.includes('rollingan')) {
-    grouped.rollingan.push(tag);
-  } else if (t.includes('qris') || t.includes('depo')) {
-    grouped.deposit.push(tag);
-  } else if (t.includes('wd') || t.includes('format')) {
-    grouped.withdraw.push(tag);
-  } else if (t.includes('estimasi')) {
-    grouped.estimasi.push(tag);
-  } else if (t.includes('clear')) {
-    grouped.clear.push(tag);
-  } else if (t.includes('baca')) {
-    grouped.baca.push(tag);
-  } else if (t.includes('bahas')) {
-    grouped.bahas.push(tag);
-  } else if (t.includes('followup')) {
-    grouped.followup.push(tag);
-  } else if (t.includes('kasar') || t.includes('marah')) {
-    grouped.kasar.push(tag);
-  } else if (t.includes('kalibrasi')) {
-    grouped.kalibrasi.push(tag);
-  } else if (t.includes('tutor') || t.includes('tutorial') || t.includes('cara')) {
-    grouped.tutorial.push(tag);
-  } else {
-    grouped.lainnya.push(tag);
-  }
-});
+    if (t.includes('cek') || t.includes('kendala')) {
+      grouped.cek.push(tag);
+    } else if (t.includes('riwayat') || t.includes('re')) {
+      grouped.riwayat.push(tag);
+    } else if (t.includes('reset') || t.includes('pass')) {
+      grouped.reset.push(tag);
+    } else if (t.includes('promo') || t.includes('sela')) {
+      grouped.promo.push(tag);
+    } else if (t.includes('vip')) {
+      grouped.vip.push(tag);
+    } else if (t.includes('rollingan')) {
+      grouped.rollingan.push(tag);
+    } else if (t.includes('qris') || t.includes('depo')) {
+      grouped.deposit.push(tag);
+    } else if (t.includes('wd') || t.includes('format')) {
+      grouped.withdraw.push(tag);
+    } else if (t.includes('estimasi')) {
+      grouped.estimasi.push(tag);
+    } else if (t.includes('clear')) {
+      grouped.clear.push(tag);
+    } else if (t.includes('baca')) {
+      grouped.baca.push(tag);
+    } else if (t.includes('bahas')) {
+      grouped.bahas.push(tag);
+    } else if (t.includes('followup')) {
+      grouped.followup.push(tag);
+    } else if (t.includes('kasar') || t.includes('marah')) {
+      grouped.kasar.push(tag);
+    } else if (t.includes('kalibrasi')) {
+      grouped.kalibrasi.push(tag);
+    } else if (t.includes('tutor') || t.includes('tutorial') || t.includes('cara')) {
+      grouped.tutorial.push(tag);
+    } else {
+      grouped.lainnya.push(tag);
+    }
+  });
+    
     
 
 // Susun isi pesan

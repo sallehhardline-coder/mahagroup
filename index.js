@@ -615,32 +615,45 @@ bot.command('add', (ctx) => {
   return ctx.reply(`✅ Berhasil menambahkan ${newTag}!`);
 });
 
-// 📌 FITUR CARI HASHTAG (/buk atau #buk)
-bot.on('text', (ctx, next) => {
+// 📌 FITUR CARI HASHTAG & RESPONS PESAN
+bot.on('text', async (ctx, next) => {
   const text = ctx.message.text.trim();
 
-  // 🛑 Abaikan perintah sistem bawaan biar gak dibaca sebagai hashtag!
+  // Abaikan perintah sistem utama biar gak dibaca sebagai hashtag!
   if (text.startsWith('/start') || text.startsWith('/list') || text.startsWith('/add')) {
-    return next(); // Lanjut ke perintah /start, /list, atau /add aslinya
+    return next();
   }
 
+  // Normalisasi teks (misal: /wdcekmutasi -> #wdcekmutasi)
+  let cleanTag = text;
+  if (text.startsWith('/')) {
+    cleanTag = '#' + text.slice(1);
+  }
+
+  // 1. CEK DULU: Apakah ada isi pesan di objek responses?
+  if (typeof responses !== 'undefined' && responses[cleanTag]) {
+    return ctx.reply(responses[cleanTag], { parse_mode: 'Markdown' });
+  }
+
+  // 2. JIKA TIDAK ADA RESPONS: Lakukan pencarian list hashtag
   if (text.startsWith('/') || text.startsWith('#')) {
     const keyword = text.replace(/^[/|#]/, '').toLowerCase();
     if (!keyword) return;
 
-    const hashtags = loadHashtags();
+    // Ambil data live dari GitHub
+    const { hashtags } = await loadHashtags();
+
     const matches = hashtags.filter(tag =>
       tag.replace('#', '').toLowerCase().startsWith(keyword)
     );
 
     if (matches.length > 0) {
-      ctx.reply(`🔎 **Pilihan Hashtag untuk \`${keyword}\`:**\n\n${matches.join(', ')}`, { parse_mode: 'Markdown' });
+      return ctx.reply(`🔎 **Pilihan Hashtag untuk \`${keyword}\`:**\n\n${matches.join(', ')}`, { parse_mode: 'Markdown' });
     } else {
-      ctx.reply(`❌ Hashtag berawalan \`${keyword}\` tidak ditemukan.`);
+      return ctx.reply(`❌ Hashtag atau perintah \`${text}\` tidak ditemukan.`);
     }
   }
 });
-
 
 // Command /start
 bot.start((ctx) => {

@@ -711,130 +711,60 @@ bot.command('list', async (ctx) => {
   try {
     // 1. Inisialisasi Kategori
     const grouped = {
-      cek: [],
-      riwayat: [],
-      reset: [],
-      promo: [],
-      vip: [],
-      rollingan: [],
-      deposit: [],
-      withdraw: [],
-      estimasi: [],
-      clear: [],
-      baca: [],
-      bahas: [],
-      followup: [],
-      kasar: [],
-      kalibrasi: [],
-      tutorial: [],
-      lainnya: []
+      cek: [], riwayat: [], reset: [], promo: [], vip: [], 
+      rollingan: [], deposit: [], withdraw: [], estimasi: [], 
+      clear: [], baca: [], bahas: [], followup: [], kasar: [], 
+      kalibrasi: [], tutorial: [], lainnya: []
     };
 
     // 2. Label Tampilan Kategori
     const labels = {
-      cek: "🔍 Cek & Kendala",
-      riwayat: "📜 Riwayat",
-      reset: "🔑 Reset Account & Password",
-      promo: "🎁 Promo",
-      vip: "👑 VIP",
-      rollingan: "🎰 Rollingan & Freeround",
-      deposit: "💳 Deposit & QRIS",
-      withdraw: "💸 Withdraw & Transaksi",
-      estimasi: "⏳ Estimasi",
-      clear: "🧹 Clear Cache",
-      baca: "📖 Baca",
-      bahas: "💬 Bahas",
-      followup: "🔄 Follow Up",
-      kasar: "⚠️ Kata Kasar & Marah",
-      kalibrasi: "⚙️ Kalibrasi",
-      tutorial: "📚 Tutorial & Cara",
-      lainnya: "📌 Lainnya"
+      cek: "🔍 Cek & Kendala", riwayat: "📜 Riwayat", reset: "🔑 Reset Account & Password",
+      promo: "🎁 Promo", vip: "👑 VIP", rollingan: "🎰 Rollingan & Freeround",
+      deposit: "💳 Deposit & QRIS", withdraw: "💸 Withdraw & Transaksi",
+      estimasi: "⏳ Estimasi", clear: "🧹 Clear Cache", baca: "📖 Baca",
+      bahas: "💬 Bahas", followup: "🔄 Follow Up", kasar: "⚠️ Kata Kasar & Marah",
+      kalibrasi: "⚙️ Kalibrasi", tutorial: "📚 Tutorial & Cara", lainnya: "📌 Lainnya"
     };
 
     // 3. Kelompokkan Hashtag
     allHashtags.forEach(tag => {
       const t = tag.toLowerCase();
-
-      if (t.includes('cek') || t.includes('kendala')) {
-        grouped.cek.push(tag);
-      } else if (t.includes('riwayat') || t.includes('re')) {
-        grouped.riwayat.push(tag);
-      } else if (t.includes('reset') || t.includes('pass')) {
-        grouped.reset.push(tag);
-      } else if (t.includes('promo') || t.includes('sela')) {
-        grouped.promo.push(tag);
-      } else if (t.includes('vip')) {
-        grouped.vip.push(tag);
-      } else if (t.includes('rollingan')) {
-        grouped.rollingan.push(tag);
-      } else if (t.includes('qris') || t.includes('depo')) {
-        grouped.deposit.push(tag);
-      } else if (t.includes('wd') || t.includes('format')) {
-        grouped.withdraw.push(tag);
-      } else if (t.includes('estimasi')) {
-        grouped.estimasi.push(tag);
-      } else if (t.includes('clear')) {
-        grouped.clear.push(tag);
-      } else if (t.includes('baca')) {
-        grouped.baca.push(tag);
-      } else if (t.includes('bahas')) {
-        grouped.bahas.push(tag);
-      } else if (t.includes('followup')) {
-        grouped.followup.push(tag);
-      } else if (t.includes('kasar') || t.includes('marah')) {
-        grouped.kasar.push(tag);
-      } else if (t.includes('kalibrasi')) {
-        grouped.kalibrasi.push(tag);
-      } else if (t.includes('tutor') || t.includes('tutorial') || t.includes('cara')) {
-        grouped.tutorial.push(tag);
-      } else {
-        grouped.lainnya.push(tag);
-      }
+      if (t.includes('cek') || t.includes('kendala')) { grouped.cek.push(tag);
+      } else if (t.includes('riwayat') || t.includes('re')) { grouped.riwayat.push(tag);
+      } else if (t.includes('reset') || t.includes('pass')) { grouped.reset.push(tag);
+      } else if (t.includes('promo') || t.includes('sela')) { grouped.promo.push(tag);
+      } else if (t.includes('vip')) { grouped.vip.push(tag);
+      } else if (t.includes('rollingan')) { grouped.rollingan.push(tag);
+      } else if (t.includes('qris') || t.includes('depo')) { grouped.deposit.push(tag);
+      } else if (t.includes('wd') || t.includes('format')) { grouped.withdraw.push(tag);
+      } else if (t.includes('estimasi')) { grouped.estimasi.push(tag);
+      } else if (t.includes('clear')) { grouped.clear.push(tag);
+      } else if (t.includes('baca')) { grouped.baca.push(tag);
+      } else if (t.includes('bahas')) { grouped.bahas.push(tag);
+      } else if (t.includes('followup')) { grouped.followup.push(tag);
+      } else if (t.includes('kasar') || t.includes('marah')) { grouped.kasar.push(tag);
+      } else if (t.includes('kalibrasi')) { grouped.kalibrasi.push(tag);
+      } else if (t.includes('tutor') || t.includes('tutorial') || t.includes('cara')) { grouped.tutorial.push(tag);
+      } else { grouped.lainnya.push(tag); }
     });
 
-    // 4. Susun Format Pesan untuk Telegram
+    // 4. Susun Format Pesan (Dengan Koma & Pindah Baris)
     let message = '<b>Daftar Hashtag Tersedia:</b>\n\n';
-
     for (const [key, tags] of Object.entries(grouped)) {
       if (tags.length > 0) {
-        // Urutkan hashtag A-Z
+        // Urutkan A-Z
         const sortedTags = tags.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
-
-        const categoryLabel = labels[key] || key;
-        message += `<b>${categoryLabel}</b>\n`;
-        message += sortedTags.map(tag => `#${tag.replace(/^#+/, '')}`).join(' ') + '\n\n';
+        
+        message += `<b>${labels[key] || key}</b>\n`;
+        // Digabung pakai koma dan spasi
+        message += sortedTags.map(tag => `#${tag.replace(/^#+/, '')}`).join(', ') + '\n\n';
       }
     }
-
     message += 'Ketik #namahashtag atau /namahashtag yang ada di list agar muncul isinya ya 😁';
 
     // 5. Kirim Pesan ke Telegram
     await ctx.reply(message, { parse_mode: 'HTML' });
-
-  } catch (error) {
-    console.error('Error pada command /list:', error);
-    ctx.reply('Gagal mengambil daftar hashtag.');
-  }
-});
-    
-    
-
-// Susun isi pesan
-let message = '<b>Daftar Hashtag Tersedia:</b>\n\n';
-
-for (const [key, tags] of Object.entries(grouped)) {
-  if (tags.length > 0) {
-    // Mengurutkan hashtag sesuai abjad (A-Z) tanpa peduli huruf besar/kecil
-    const sortedTags = tags.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
-
-    message += `<b>${labels[key]}</b>\n`;
-    message += sortedTags.map(tag => `#${tag.replace(/^#+/, '')}`).join(', ') + '\n\n';
-  }
-}
-
-message += 'Ketik #namahashtag atau /namahashtag yang ada di list agar muncul isinya ya 🤩';
-
-await ctx.reply(message, { parse_mode: 'HTML' });
   } catch (error) {
     console.error('Error pada command /list:', error);
     ctx.reply('Gagal mengambil daftar hashtag.');

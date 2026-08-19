@@ -707,101 +707,115 @@ bot.start((ctx) => {
   ctx.reply('Butuh bantuan hashtag? Ketik /list ya ^^.\nDibuat oleh @shllwGrave 🗿');
 });
 
-// Command /list (Otomatis Grouping dari responses)
 bot.command('list', async (ctx) => {
   try {
-    if (typeof responses === 'undefined' || !responses) {
-      return ctx.reply('Data responses belum terdaftar/kosong.');
+    // 1. Inisialisasi Kategori
+    const grouped = {
+      cek: [],
+      riwayat: [],
+      reset: [],
+      promo: [],
+      vip: [],
+      rollingan: [],
+      deposit: [],
+      withdraw: [],
+      estimasi: [],
+      clear: [],
+      baca: [],
+      bahas: [],
+      followup: [],
+      kasar: [],
+      kalibrasi: [],
+      tutorial: [],
+      lainnya: []
+    };
+
+    // 2. Label Tampilan Kategori
+    const labels = {
+      cek: "🔍 Cek & Kendala",
+      riwayat: "📜 Riwayat",
+      reset: "🔑 Reset Account & Password",
+      promo: "🎁 Promo",
+      vip: "👑 VIP",
+      rollingan: "🎰 Rollingan & Freeround",
+      deposit: "💳 Deposit & QRIS",
+      withdraw: "💸 Withdraw & Transaksi",
+      estimasi: "⏳ Estimasi",
+      clear: "🧹 Clear Cache",
+      baca: "📖 Baca",
+      bahas: "💬 Bahas",
+      followup: "🔄 Follow Up",
+      kasar: "⚠️ Kata Kasar & Marah",
+      kalibrasi: "⚙️ Kalibrasi",
+      tutorial: "📚 Tutorial & Cara",
+      lainnya: "📌 Lainnya"
+    };
+
+    // 3. Kelompokkan Hashtag
+    allHashtags.forEach(tag => {
+      const t = tag.toLowerCase();
+
+      if (t.includes('cek') || t.includes('kendala')) {
+        grouped.cek.push(tag);
+      } else if (t.includes('riwayat') || t.includes('re')) {
+        grouped.riwayat.push(tag);
+      } else if (t.includes('reset') || t.includes('pass')) {
+        grouped.reset.push(tag);
+      } else if (t.includes('promo') || t.includes('sela')) {
+        grouped.promo.push(tag);
+      } else if (t.includes('vip')) {
+        grouped.vip.push(tag);
+      } else if (t.includes('rollingan')) {
+        grouped.rollingan.push(tag);
+      } else if (t.includes('qris') || t.includes('depo')) {
+        grouped.deposit.push(tag);
+      } else if (t.includes('wd') || t.includes('format')) {
+        grouped.withdraw.push(tag);
+      } else if (t.includes('estimasi')) {
+        grouped.estimasi.push(tag);
+      } else if (t.includes('clear')) {
+        grouped.clear.push(tag);
+      } else if (t.includes('baca')) {
+        grouped.baca.push(tag);
+      } else if (t.includes('bahas')) {
+        grouped.bahas.push(tag);
+      } else if (t.includes('followup')) {
+        grouped.followup.push(tag);
+      } else if (t.includes('kasar') || t.includes('marah')) {
+        grouped.kasar.push(tag);
+      } else if (t.includes('kalibrasi')) {
+        grouped.kalibrasi.push(tag);
+      } else if (t.includes('tutor') || t.includes('tutorial') || t.includes('cara')) {
+        grouped.tutorial.push(tag);
+      } else {
+        grouped.lainnya.push(tag);
+      }
+    });
+
+    // 4. Susun Format Pesan untuk Telegram
+    let message = '<b>Daftar Hashtag Tersedia:</b>\n\n';
+
+    for (const [key, tags] of Object.entries(grouped)) {
+      if (tags.length > 0) {
+        // Urutkan hashtag A-Z
+        const sortedTags = tags.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+
+        const categoryLabel = labels[key] || key;
+        message += `<b>${categoryLabel}</b>\n`;
+        message += sortedTags.map(tag => `#${tag.replace(/^#+/, '')}`).join(' ') + '\n\n';
+      }
     }
 
-    const allHashtags = Object.keys(responses);
+    message += 'Ketik #namahashtag atau /namahashtag yang ada di list agar muncul isinya ya 😁';
 
-    if (allHashtags.length === 0) {
-      return ctx.reply('Belum ada hashtag yang terdaftar.');
-    }
+    // 5. Kirim Pesan ke Telegram
+    await ctx.reply(message, { parse_mode: 'HTML' });
 
-      // Inisialisasi pengelompokan hashtag
-  const grouped = {
-    cek: [],
-    riwayat: [],
-    reset: [],
-    promo: [],
-    vip: [],
-    rollingan: [],
-    deposit: [],
-    withdraw: [],
-    estimasi: [],
-    clear: [],
-    baca: [],
-    bahas: [],
-    followup: [],
-    kasar: [],
-    kalibrasi: [],
-    tutorial: [],
-    lainnya: []
-  };
-
-  // Label tampilan untuk Telegram
-  const labels = {
-    cek: "🔍 Cek & Kendala",
-    riwayat: "📜 Riwayat",
-    reset: "🔑 Reset Account & Password",
-    promo: "🎁 Promo",
-    vip: "👑 VIP",
-    rollingan: "🎰 Rollingan & Freeround",
-    deposit: "💳 Deposit & QRIS",
-    withdraw: "💸 Withdraw & Transaksi",
-    estimasi: "⏳ Estimasi",
-    clear: "🧹 Clear Cache",
-    baca: "📖 Baca",
-    bahas: "💬 Bahas",
-    followup: "🔄 Follow Up",
-    kasar: "⚠️ Kata Kasar & Marah",
-    kalibrasi: "⚙️ Kalibrasi",
-    tutorial: "📚 Tutorial & Cara",
-    lainnya: "📌 Lainnya"
-  };
-
-  // Filter hashtag berdasarkan keyword
-  allHashtags.forEach(tag => {
-    const t = tag.toLowerCase();
-
-    if (t.includes('cek') || t.includes('kendala')) {
-      grouped.cek.push(tag);
-    } else if (t.includes('riwayat') || t.includes('re')) {
-      grouped.riwayat.push(tag);
-    } else if (t.includes('reset') || t.includes('pass')) {
-      grouped.reset.push(tag);
-    } else if (t.includes('promo') || t.includes('sela')) {
-      grouped.promo.push(tag);
-    } else if (t.includes('vip')) {
-      grouped.vip.push(tag);
-    } else if (t.includes('rollingan')) {
-      grouped.rollingan.push(tag);
-    } else if (t.includes('qris') || t.includes('depo')) {
-      grouped.deposit.push(tag);
-    } else if (t.includes('wd') || t.includes('format')) {
-      grouped.withdraw.push(tag);
-    } else if (t.includes('estimasi')) {
-      grouped.estimasi.push(tag);
-    } else if (t.includes('clear')) {
-      grouped.clear.push(tag);
-    } else if (t.includes('baca')) {
-      grouped.baca.push(tag);
-    } else if (t.includes('bahas')) {
-      grouped.bahas.push(tag);
-    } else if (t.includes('followup')) {
-      grouped.followup.push(tag);
-    } else if (t.includes('kasar') || t.includes('marah')) {
-      grouped.kasar.push(tag);
-    } else if (t.includes('kalibrasi')) {
-      grouped.kalibrasi.push(tag);
-    } else if (t.includes('tutor') || t.includes('tutorial') || t.includes('cara')) {
-      grouped.tutorial.push(tag);
-    } else {
-      grouped.lainnya.push(tag);
-    }
-  });
+  } catch (error) {
+    console.error('Error pada command /list:', error);
+    ctx.reply('Gagal mengambil daftar hashtag.');
+  }
+});
     
     
 

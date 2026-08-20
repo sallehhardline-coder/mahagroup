@@ -749,7 +749,7 @@ bot.command('list', async (ctx) => {
 
         message += `<b>${labels[key] || key}</b>\n`;
         // Digabung pakai koma dan spasi
-        message += sortedTags.map(tag => `/#${tag.replace(/^#+/, '')}`).join(', ') + '\n\n';
+        message += sortedTags.map(tag => `#${tag.replace(/^#+/, '')}`).join(', ') + '\n\n';
       }
     }
     message += 'Ketik #namahashtag atau /namahashtag yang ada di list agar muncul isinya ya 😁';

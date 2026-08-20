@@ -645,16 +645,25 @@ bot.on('text', async (ctx, next) => {
       return next();
     }
 
-    // Normalisasi teks (misal: /wdcekmutasi -> #wdcekmutasi)
-    let cleanTag = text;
-    if (text.startsWith('/')) {
-      cleanTag = '#' + text.slice(1);
-    }
+   // Normalisasi teks agar selalu berawalan '#'
+let cleanTag = text.trim();
+if (cleanTag.startsWith('/')) {
+  cleanTag = '#' + cleanTag.slice(1);
+} else if (!cleanTag.startsWith('#')) {
+  cleanTag = '#' + cleanTag;
+}
 
-    // 1. CEK DULU: Apakah ada isi pesan di objek responses?
-    if (typeof responses !== 'undefined' && responses && responses[cleanTag]) {
-      return ctx.reply(responses[cleanTag]);
-    }
+// 1. CEK DULU: Apakah ada isi pesan di objek responses (Case-Insensitive)
+if (typeof responses !== 'undefined' && responses) {
+  // Cari key secara akurat tanpa terpengaruh huruf besar/kecil
+  const foundKey = Object.keys(responses).find(
+    (key) => key.toLowerCase() === cleanTag.toLowerCase()
+  );
+
+  if (foundKey && responses[foundKey]) {
+    return ctx.reply(responses[foundKey]);
+  }
+}
 
     // 2. JIKA TIDAK ADA RESPONS: Lakukan pencarian list hashtag
     if (text.startsWith('/') || text.startsWith('#')) {

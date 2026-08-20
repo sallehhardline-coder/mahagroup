@@ -699,14 +699,25 @@ bot.command('list', async (ctx) => {
     };
 
     // 2. Label Tampilan Kategori
-    const labels = {
-      cek: "🔍 Cek & Kendala", riwayat: "📜 Riwayat", reset: "🔑 Reset Account & Password",
-      promo: "🎁 Promo", vip: "👑 VIP", rollingan: "🎰 Rollingan & Freeround",
-      deposit: "💳 Deposit & QRIS", withdraw: "💸 Withdraw & Transaksi",
-      estimasi: "⏳ Estimasi", clear: "🧹 Clear Cache", baca: "📖 Baca",
-      bahas: "💬 Bahas", followup: "🔄 Follow Up", kasar: "⚠️ Kata Kasar & Marah",
-      kalibrasi: "⚙️ Kalibrasi", tutorial: "📚 Tutorial & Cara", lainnya: "📌 Lainnya"
-    };
+   const labels = {
+  cek: "🔍 Cek & Kendala",
+  riwayat: "📜 Riwayat",
+  reset: "🔑 Reset Account & Password",
+  promo: "🎁 Promo",
+  vip: "👑 VIP",
+  rollingan: "🎰 Rollingan & Freeround",
+  deposit: "💳 Deposit &amp; QRIS",
+  withdraw: "💸 Withdraw &amp; Transaksi",
+  estimasi: "⏳ Estimasi",
+  clear: "🧹 Clear Cache",
+  baca: "📖 Baca",
+  bahas: "💬 Bahas",
+  followup: "🔄 Follow Up",
+  kasar: "⚠️ Kata Kasar &amp; Marah",
+  kalibrasi: "⚙️ Kalibrasi",
+  tutorial: "📚 Tutorial &amp; Cara",
+  lainnya: "📌 Lainnya"
+};
 
     // 3. Kelompokkan Hashtag
     allHashtags.forEach(tag => {
@@ -716,7 +727,7 @@ bot.command('list', async (ctx) => {
       } else if (t.includes('reset') || t.includes('pass')) { grouped.reset.push(tag);
       } else if (t.includes('promo') || t.includes('sela')) { grouped.promo.push(tag);
       } else if (t.includes('vip')) { grouped.vip.push(tag);
-      } else if (t.includes('rollingan')) { grouped.rollingan.push(tag);
+      } else if (t.includes('rollingan') || t.includes('free') || t.includes('round')) { grouped.rollingan.push(tag); }
       } else if (t.includes('qris') || t.includes('depo')) { grouped.deposit.push(tag);
       } else if (t.includes('wd') || t.includes('format')) { grouped.withdraw.push(tag);
       } else if (t.includes('estimasi')) { grouped.estimasi.push(tag);

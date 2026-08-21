@@ -188,7 +188,7 @@ Terkait kendala lupa password, silakan gunakan fitur Lupa Password yang tersedia
 Namun, apabila email yang terhubung dengan ID akun sudah tidak aktif atau Anda juga lupa email yang terdaftar, kakak dapat mengajukan reset password dengan menghubungi tim kami melalui tautan berikut:
 
 Link Pusat Reset Password:
-https://customer.customersupportdesk.ai/chat?workspaceId=019bfd25-bb3c-71b1-83d6-3989be2dda33`,
+https://widget-g7main.customersupportdesk.ai/chat?workspaceId=01a023f0-0f35-776e-9e1a-485f0eac2fac`,
 
   '#humasMAHAGROUP': `silahkan hubungi humas kami bila ada kendala perihal deposit, whithdraw, reset rekening, atau seputar website kami ya kak ^^ kami siap melayani anda 1x24 jam.
 

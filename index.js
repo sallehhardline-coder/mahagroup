@@ -595,6 +595,8 @@ CQ9 Slot`,
 
   '#qrisgagal': 'transaksi gagal/tidak ditemukan pada merchant QRIS kami, silakan ajukan refund ke pihak BANK/Ewallet yang Anda gunakan dengan cara menghubungi Customer Service pada aplikasi BANK/Ewallet yang Anda gunakan ya kak :) ',
 
+  '#alasanreset': 'bisa berikan alasan mengapa ingin mengubah data rekening withdrawnya kak? 🙂 ',
+
 
 
 };

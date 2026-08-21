@@ -387,8 +387,7 @@ Over/Under, 1x2, Tebak skor, Ganjil Genap, Total Skor, Gol pertama / terakhir).
   '#baca4': 'silahkan dibaca terlebih dahulu dan dipahami informasi yang  kami berikan di atas ya kak ^^ ',
   '#bacasyaratreset': 'biasakan untuk membaca informasi yang kami berikan hingga selesai terlebih dahulu, lalu dipahami, kemudian difikirkan apakah sudah memenuhi persyaratan / belum kak. Jangan malas untuk membaca ya kak 🙂 ',
   '#beritadepo': 'Kami tidak pernah menyarankan kakak untuk transfer menggunakan keterangan (berita transfer) ya kak, untuk kali ini akan kami bantu proseskan depositnya. Tapi, jika ke depannya kakak masih transfer menggunakan keterangan maka deposit akan kami hanguskan  dan user ID anda akan di-banned, mohon untuk tidak melanggar dan terima kasih atas pengertiannya ^^ ',
-  '#beritadepo2': `mohon maaf atas keterlambatan prosesan depositnya dikarenakan kakak melakukan transfer dengan menggunakan KODE BERITA, yang dimana di situs kami tindakan kakak sangat dilarang keras ya kak. 
-Kedepannya jika melakukan deposit untuk tidak menggunakan KODE BERITA ya kak^^ dan apabila kakak kedepannya masih menggunakan KODE BERITA, maka mohon maaf depaosit kakak kami anggap gagal dan saldo tersebut kami anggap hangus ya kak 🙂 `,
+  '#beritadepo2': 'setelah kami cek Anda menggunakan kode berita pada transfer tersebut ya kak. Kami sangat melarang transfer deposit menggunakan kode berita kak. Deposit belum dapat langsung kami proses sekarang dan masih dalam pengecekan ya kak, untuk ke depannya silakan lakukan deposit melalui AUTO BANK/QRIS yang ada di menu deposit kami ya kak :)',
   '#kodeunik': `jika ingin diproses dan dicek dengan cepat depositnya, biasakan transfer sesuai nominal yang muncul pada formular deposit ya, kak 🙂
 Contoh: jika yang muncul 50.058 maka transfer juga sesuai nominal tersebut kak `,
   '#norekdepo': `Cara mengetahui nomor rekening deposit di website kami:
@@ -596,7 +595,7 @@ CQ9 Slot`,
 
   '#qrisgagal': 'transaksi gagal/tidak ditemukan pada merchant QRIS kami, silakan ajukan refund ke pihak BANK/Ewallet yang Anda gunakan dengan cara menghubungi Customer Service pada aplikasi BANK/Ewallet yang Anda gunakan ya kak :) ',
 
-  '#beritadepo': 'setelah kami cek Anda menggunakan kode berita pada transfer tersebut ya kak. Kami sangat melarang transfer deposit menggunakan kode berita kak. Deposit belum dapat langsung kami proses sekarang dan masih dalam pengecekan ya kak, untuk ke depannya silakan lakukan deposit melalui AUTO BANK/QRIS yang ada di menu deposit kami ya kak :)',
+
 
 };
 

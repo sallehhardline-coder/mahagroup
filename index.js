@@ -250,7 +250,7 @@ https://prnt.sc/HeeIdXsTdm4L (Tampilan Versi Dekstop / WEB)
   '#doneresetpassword': `jika sudah melakukan reset password dari link Pusat Reset Password, lakukan login menggunakan password sementara yang diberikan, kemudian lakukan pergantian password pada halaman Profile Akun di bagian Ubah Kata Sandi
 
 letaknya di sini ya kak: https://prnt.sc/fDgslRZRhLE2 `,
-  '#selamatataskemenangan': `selamat atas kemenangannya ya kak🤩 kami do'akan semoga mendapat JACKPOT MAXWIN di kesempatan berikutnya kak🥳🥳🥳
+  '#selamatwd': `selamat atas kemenangannya ya kak🤩 kami do'akan semoga mendapat JACKPOT MAXWIN di kesempatan berikutnya kak🥳🥳🥳
 jangan lupa ajak teman-temannya bermain di situs kami ya kak🥰😍 Withdraw berapapun pasti dibayar💸💸💸 `,
   '#selesaikanpromo': 'silakan diselesaikan TO/TurnOver dari promonya, agar dapat berpindah permainan ke provider lain/melakukan withdraw ya, kak ^^ ',
   '#rollingan': `Bonus Cashback/rollingan akan di bagikan otomatis hari Selasa dan paling lambat hari Rabu maksimal pukul 23:00.
@@ -595,7 +595,8 @@ CQ9 Slot`,
   '#wdcekmutasi': 'untuk kendala withdraw pada ID tersebut, setelah kami cek bahwa withdraw tersebut sudah kami transfer namun terjadi kegagalan dari pihak BANK/Ewallet terkait yang kakak gunakan ya kak, dan untuk saldo pada BANK Withdraw kami telah terpotong meskipun transaksinya gagal ya kak. Mohon ditunggu dalam 1 x 24 jam ke depan (estimasi Waktu paling cepat) atau dalam 7 x 24 jam ke depan (estimasi Waktu paling lambatnya) ',
 
   '#qrisgagal': 'transaksi gagal/tidak ditemukan pada merchant QRIS kami, silakan ajukan refund ke pihak BANK/Ewallet yang Anda gunakan dengan cara menghubungi Customer Service pada aplikasi BANK/Ewallet yang Anda gunakan ya kak :) ',
-  
+
+  '#beritadepo': 'setelah kami cek Anda menggunakan kode berita pada transfer tersebut ya kak. Kami sangat melarang transfer deposit menggunakan kode berita kak. Deposit belum dapat langsung kami proses sekarang dan masih dalam pengecekan ya kak, untuk ke depannya silakan lakukan deposit melalui AUTO BANK/QRIS yang ada di menu deposit kami ya kak :)',
 
 };
 

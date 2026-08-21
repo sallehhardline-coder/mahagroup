@@ -741,7 +741,7 @@ bot.command('list', async (ctx) => {
       else if (t.includes('vip')) { grouped.vip.push(tag); }
       else if (t.includes('rollingan') || t.includes('free') || t.includes('round')) { grouped.rollingan.push(tag); }
       else if (t.includes('qris') || t.includes('depo')) { grouped.deposit.push(tag); }
-      else if (t.includes('wd') || t.includes('format')) { grouped.withdraw.push(tag); }
+      else if (t.includes('wd') || t.includes('format')) || t.includes('selamat')) { grouped.withdraw.push(tag); }
       else if (t.includes('estimasi')) { grouped.estimasi.push(tag); }
       else if (t.includes('clear')) { grouped.clear.push(tag); }
       else if (t.includes('baca')) { grouped.baca.push(tag); }

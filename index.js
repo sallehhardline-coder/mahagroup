@@ -735,7 +735,7 @@ bot.command('list', async (ctx) => {
     allHashtags.forEach(tag => {
       const t = tag.toLowerCase();
       if (t.includes('cek') || t.includes('kendala')) { grouped.cek.push(tag); }
-      else if (t.includes('riwayat') || t.includes('re')) { grouped.riwayat.push(tag); }
+      else if (t.includes('riwayat') || t.includes('rekam')) { grouped.riwayat.push(tag); }
       else if (t.includes('reset') || t.includes('pass')) { grouped.reset.push(tag); }
       else if (t.includes('promo') || t.includes('sela')) { grouped.promo.push(tag); }
       else if (t.includes('vip')) { grouped.vip.push(tag); }

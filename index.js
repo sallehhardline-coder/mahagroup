@@ -734,13 +734,13 @@ bot.command('list', async (ctx) => {
     // 3. Kelompokkan Hashtag
     allHashtags.forEach(tag => {
       const t = tag.toLowerCase();
-      if (t.includes('cek') || t.includes('kendala')) { grouped.cek.push(tag); }
+      if (t.includes('cek') || t.includes('detail') || t.includes('kendala')) { grouped.cek.push(tag); }
       else if (t.includes('riwayat') || t.includes('rekam')) { grouped.riwayat.push(tag); }
       else if (t.includes('reset') || t.includes('pass')) { grouped.reset.push(tag); }
       else if (t.includes('promo') || t.includes('selesai')) { grouped.promo.push(tag); }
       else if (t.includes('vip')) { grouped.vip.push(tag); }
       else if (t.includes('rollingan') || t.includes('free') || t.includes('round')) { grouped.rollingan.push(tag); }
-      else if (t.includes('qris') || t.includes('depo')) { grouped.deposit.push(tag); }
+      else if (t.includes('qris') || t.includes('bukti') || t.includes('depo')) { grouped.deposit.push(tag); }
       else if (t.includes('wd') || t.includes('format') || t.includes('limit') || t.includes('invalid') || t.includes('selamat')) { grouped.withdraw.push(tag); }
       else if (t.includes('estimasi')) { grouped.estimasi.push(tag); }
       else if (t.includes('clear')) { grouped.clear.push(tag); }

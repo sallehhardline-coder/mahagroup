@@ -217,7 +217,7 @@ BANK Terupdate : diisi tujuan BANK WD yang benar
 SALDO : diisi dengan saldo di akun game
 ALASAN : biarkan kami yang isi kak`,
 
-  '#formatqrispending': `FORMAT QRIS PENDING
+  '#formatqris': `FORMAT QRIS PENDING
 
 WEB : 
 USER NAME : 

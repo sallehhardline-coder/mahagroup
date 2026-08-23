@@ -597,6 +597,9 @@ CQ9 Slot`,
 
   '#alasanreset': 'bisa berikan alasan mengapa ingin mengubah data rekening withdrawnya kak? 🙂 ',
 
+  '#refferal': `Bonus referral dibagikan setiap hari Selasa - Rabu paling lambat pukul 23:00 WIB.
+minimal memiliki 10 member aktif dalam satu minggu ya, dan TO minimal -2,5 juta  dalam 1 minggu ya kak^^`,
+
 
 
 };

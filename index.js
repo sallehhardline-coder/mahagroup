@@ -600,6 +600,9 @@ CQ9 Slot`,
   '#refferal': `Bonus referral dibagikan setiap hari Selasa - Rabu paling lambat pukul 23:00 WIB.
 minimal memiliki 10 member aktif dalam satu minggu ya, dan TO minimal -2,5 juta  dalam 1 minggu ya kak^^`,
 
+  '#saldogacukup': `silahkan kakak tekan icon refresh yang berada di samping kanan saldonya ya kak ^^
+Contohnya seperti ini ya kak: https://prnt.sc/t7OErtlY0yGH`,
+
 
 
 };

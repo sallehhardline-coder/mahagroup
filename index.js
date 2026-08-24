@@ -603,6 +603,8 @@ minimal memiliki 10 member aktif dalam satu minggu ya, dan TO minimal -2,5 juta 
   '#saldogacukup': `silahkan kakak tekan icon refresh yang berada di samping kanan saldonya ya kak ^^
 Contohnya seperti ini ya kak: https://prnt.sc/t7OErtlY0yGH`,
 
+  '#depopulsa': 'Mohon maaf kak, untuk deposit via pulsa tidak tersedia saat ini di situs kami ya kak. Silakan deposit ke BANK/QRIS kami pada menu deposit, dan jangan lupa untuk deposit sesuai NOMINAL yang muncul di form depositnya ya kak 🙂 ',
+
 
 
 };

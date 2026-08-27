@@ -179,9 +179,9 @@ Saldo pada ID __ tidak dapat kami proses withdrawnya, akun sudah tidak dapat kam
 
   '#isiformat': 'silakan disalin dan diisi formatnya dengan benar dan sesuai dengan yang kami kirimkan ya kak',
 
-  '#hubungipusatreset': 'silakan hubungi Pusat Reset Password melalui link yang kami berikan di atas ya kak. Akan dibantu oleh tim kami untuk kendala lupa password yang kakak alami. Terima kasih kakak :)',
+  '#hubpusatreset': 'silakan hubungi Pusat Reset Password melalui link yang kami berikan di atas ya kak. Akan dibantu oleh tim kami untuk kendala lupa password yang kakak alami. Terima kasih kakak :)',
 
-  '#pusatresetpw': `Halo Kakak,
+  '#resetpw': `Halo Kakak,
 
 Terkait kendala lupa password, silakan gunakan fitur Lupa Password yang tersedia di beranda situs kami.
 

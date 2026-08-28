@@ -605,6 +605,8 @@ Contohnya seperti ini ya kak: https://prnt.sc/t7OErtlY0yGH`,
 
   '#depopulsa': 'Mohon maaf kak, untuk deposit via pulsa tidak tersedia saat ini di situs kami ya kak. Silakan deposit ke BANK/QRIS kami pada menu deposit, dan jangan lupa untuk deposit sesuai NOMINAL yang muncul di form depositnya ya kak 🙂 ',
 
+  '#artiTO': 'TurnOver adalah Total taruhan dari bettingan yang kakak pasang selama kakak bermain . Contoh : misalkan kakak bermain di salah satu game, dan memasang bett 1000 rupiah, lalu kakak memasang/melakukan betting sebanyak 100x putaran maka total TurnOver yang sudah kakak pasang adalah 1000 x 100 = 100.000 , jadi TurnOver yang sudah kakak capai adalah 100.000 rupiah 😊 ',
+
 
 
 };

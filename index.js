@@ -268,7 +268,7 @@ untuk bonus rollingan silahkan ditunggu saja sesuai informasi yang telah kami be
   '#rollinganrules2': 'untuk rollingan minggu ini adalah hasil perhitungan TO/TurnOver dari minggu lalu ya kak. Untuk TO/TurnOver minggu ini, akan dihitung untuk rollingan minggu depan kak 🙂 ',
   '#rollingandone': `untuk rollingan sudah dibagikan ya kak. Silakan dicek dompet utamanya ^^ 
 Untuk rollingan dihitung sesuai dengan Turn Over permainan (bukan jumlah deposit), jika kakak tidak mendapatkan rollingan, maka Turn Over yang kakak mainkan belum mencapai syarat minimal Turn Over sebesar 500.000 ya kak 🙂 `,
-  '#rollinganpersenan': `Cashback/Rollingan Slot 1% dari total TO/TurnOver. Akan otomatis masuk setiap hari SELASA - RABU maksimal pukul 23.00 WIB. Minimal TO/TurnOver 500.000
+  '#cashback': `Cashback/Rollingan Slot 1% dari total TO/TurnOver. Akan otomatis masuk setiap hari SELASA - RABU maksimal pukul 23.00 WIB. Minimal TO/TurnOver 500.000
 
 Cashback/Rollingan SportBook 1% dari total TO/TurnOver. Akan otomatis masuk setiap hari SELASA - RABU maksimal pukul 23.00 WIB. `,
   '#qris1x24': 'Mohon maaf atas kendala deposit AUTOBANK / QRIS yang Anda alami ya kakak. Untuk depositnya sudah kami bantu laporkan kembali ke tim terkait untuk proses pengecekan, mohon kesediannya untuk menunggu maksimal 1x24 jam. ',
@@ -749,7 +749,7 @@ bot.command('list', async (ctx) => {
       else if (t.includes('reset') || t.includes('pass')) { grouped.reset.push(tag); }
       else if (t.includes('promo') || t.includes('selesai')) { grouped.promo.push(tag); }
       else if (t.includes('vip')) { grouped.vip.push(tag); }
-      else if (t.includes('rollingan') || t.includes('free') || t.includes('round')) { grouped.rollingan.push(tag); }
+      else if (t.includes('rollingan') || t.includes('cashback') || t.includes('free') || t.includes('round')) { grouped.rollingan.push(tag); }
       else if (t.includes('qris') || t.includes('bukti') || t.includes('depo')) { grouped.deposit.push(tag); }
       else if (t.includes('wd') || t.includes('format') || t.includes('limit') || t.includes('invalid') || t.includes('selamat')) { grouped.withdraw.push(tag); }
       else if (t.includes('estimasi')) { grouped.estimasi.push(tag); }

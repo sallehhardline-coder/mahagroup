@@ -289,7 +289,13 @@ Kakak bisa langsung mengetuk tombol "Butuh Bantuan?" yang ada di bagian bawah sc
 Call Center: 1500 130
 
 Live Chat: Buka aplikasi SeaBank > Menu Saya > Chat dengan Customer Service `,
-  '#rekamlayar': 'tolong kirimkan rekaman layar bagian riwayat transaksi/mutasi M-Banking/EWALLET Anda kak, serta bagian yang menunjukan nomor dan nama rekening Anda pada aplikasi M-Banking/EWALLET yang Anda gunakan ya kak 🙂 ',
+  '#wdgamasuk': `kirimkan video rekam layarnya ya kak ^^
+
+1. Masuk aplikasi Ewallet/Bank  
+2. Masuk profile aplikasi Ewallet/Bank, wajib terlihat nama rekening dan nomornya 
+3. Masuk Riwayat Transaksi/Mutasi dan discroll secara perlahan ke bawah sampai melewati batas tanggal withdraw Anda kak
+
+video wajib detail, dan jernih ya kak :)`,
   '#kalibrasi': `Cara untuk mengembalikan saldo ke dompet utama/kalibrasi:
 
 - Masuk kembali ke dalam game dimana saldo terakhir berada

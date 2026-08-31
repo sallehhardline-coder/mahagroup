@@ -446,7 +446,7 @@ silakan dicoba, dan pastikan juga jaringan yang Anda gunakan itu stabil serta la
   '#edc': 'Jika kaka deposit melalui mesin EDC/WBNK maka kami akan proses setelah 1x24 jam ya ka. Silakan kembali lagi setelah 1x24 jam, dengan mengirimkan kembali screenshot bukti transfernya ya kak 🙂 ',
   '#estimasi': 'kami belum bisa memastikan untuk estimasinya kakak, silahkan ditunggu dan cek secara berkala untuk dapat mengetahui jika sudah normal kembali ya kakak🙏🏻 ',
   '#estimasi2': 'untuk estimasi waktunya belum dapat kami pastikan ya kak, silahkan ditunggu saja dan dicek secara berkala ^^ ',
-  '#estimasiresetakun': 'mohon ditunggu ya kak, selama proses reset akun jangan dimainkan saldonya kak. Estimasi peresetan akun sekitar 30 menit / lebih daripada itu ya kak, mohon ditunggu kabar terbaru dari kami / kakak bisa menghubungi HUMAS kami di Whatsapp / Telegram untuk mengetahui proses reset akun yang sedang berlangsung 🙂 ',
+  '#estimasireset': 'mohon ditunggu ya kak, selama proses reset akun jangan dimainkan saldonya kak. Estimasi peresetan akun sekitar 30 menit / lebih daripada itu ya kak, mohon ditunggu kabar terbaru dari kami / kakak bisa menghubungi HUMAS kami di Whatsapp / Telegram untuk mengetahui proses reset akun yang sedang berlangsung 🙂 ',
   '#akunterbatas': `jika akun kakak dibatasi itu karena kakak memasukkan ID atau PASWORD yang tidak sesuai secara terus menerus ya kak 🙂
 silahkan diingat kembali ID/PASWORD yang kakak gunakan, lalu dicoba kembali setelah 24 jam ke depan  kak ^^ `,
   '#daftarbaru': `untuk membuat/mendaftarkan akun baru, kakak bisa pergi ke menu "Daftar" ya kak 🙂

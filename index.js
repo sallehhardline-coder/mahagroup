@@ -179,16 +179,9 @@ Saldo pada ID __ tidak dapat kami proses withdrawnya, akun sudah tidak dapat kam
 
   '#isiformat': 'silakan disalin dan diisi formatnya dengan benar dan sesuai dengan yang kami kirimkan ya kak',
 
-  '#hubpusatreset': 'silakan hubungi Pusat Reset Password melalui link yang kami berikan di atas ya kak. Akan dibantu oleh tim kami untuk kendala lupa password yang kakak alami. Terima kasih kakak :)',
+  '#lupapw': `kami tidak dapat membantu kendala lupa password ya kak. Silakan diingat kembali password Anda ya kak / gunakan fitur "Lupa Password" yang ada pada menu login ya kak
 
-  '#resetpw': `Halo Kakak,
-
-Terkait kendala lupa password, silakan gunakan fitur Lupa Password yang tersedia di beranda situs kami.
-
-Namun, apabila email yang terhubung dengan ID akun sudah tidak aktif atau Anda juga lupa email yang terdaftar, kakak dapat mengajukan reset password dengan menghubungi tim kami melalui tautan berikut:
-
-Link Pusat Reset Password:
-https://widget-g7main.customersupportdesk.ai/chat?workspaceId=01a023f0-0f35-776e-9e1a-485f0eac2fac`,
+letaknya "Lupa Password" ada di sini kak: https://prnt.sc/6oq8hMS5Chri`,
 
   '#humasMAHAGROUP': `silahkan hubungi humas kami bila ada kendala perihal deposit, whithdraw, reset rekening, atau seputar website kami ya kak ^^ kami siap melayani anda 1x24 jam.
 
@@ -752,7 +745,7 @@ bot.command('list', async (ctx) => {
       const t = tag.toLowerCase();
       if (t.includes('cek') || t.includes('detail') || t.includes('kendala')) { grouped.cek.push(tag); }
       else if (t.includes('riwayat') || t.includes('rekam')) { grouped.riwayat.push(tag); }
-      else if (t.includes('reset') || t.includes('pass')) { grouped.reset.push(tag); }
+      else if (t.includes('reset') || t.includes('pass')  || t.includes('pw')) { grouped.reset.push(tag); }
       else if (t.includes('promo') || t.includes('selesai')) { grouped.promo.push(tag); }
       else if (t.includes('vip')) { grouped.vip.push(tag); }
       else if (t.includes('rollingan') || t.includes('cashback') || t.includes('free') || t.includes('round')) { grouped.rollingan.push(tag); }

@@ -752,6 +752,7 @@ bot.command('list', async (ctx) => {
       kasar: "⚠️ Kata Kasar &amp; Marah",
       kalibrasi: "⚙️ Kalibrasi",
       tutorial: "📚 Tutorial &amp; Cara",
+      berita: "‼️ Berita",
       lainnya: "📌 Lainnya"
     };
 

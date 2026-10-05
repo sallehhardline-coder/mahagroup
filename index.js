@@ -731,7 +731,7 @@ bot.command('list', async (ctx) => {
       cek: [], riwayat: [], reset: [], promo: [], vip: [],
       rollingan: [], deposit: [], withdraw: [], estimasi: [],
       clear: [], baca: [], bahas: [], followup: [], kasar: [],
-      kalibrasi: [], tutorial: [], lainnya: []
+      kalibrasi: [], tutorial: [], berita: [], lainnya: []
     };
 
     // 2. Label Tampilan Kategori

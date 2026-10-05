@@ -616,6 +616,11 @@ Link Pusat Reset Password:
 
 https://widget-g7main.customersupportdesk.ai/chat?workspaceId=01a023f0-0f35-776e-9e1a-485f0eac2fac`,
 
+  '#berita1': 'untuk kendala Anda deposit beda nama dan menggunakan kode berita tidak dapat kami proses, dan saldo kami anggap hangus. Ini sudah peraturan kami. Ke depannya silakan deposit AUTO BANK/QRIS saja yang bisa beda nama dan lebih cepat terprosesnya. Terima kasih kak',
+
+  '#berita2': 'mohon maaf depositnya memang tidak bisa kami proses karena berbeda nama rekening serta mengisi kode berita ya kak ^^ ke depannya deposit AUTO BANK / QRIS saja yang lebih cepat dan bisa dari beda nama rekening ya kak :)',
+
+  '#berita3': 'tetap tidak bisa kami proses depositnya karena Anda transfer dari beda nama rekening dan mengisi kode berita ya kak ^^ ke depannya deposit AUTO BANK / QRIS saja yang lebih cepat dan bisa dari beda nama rekening ya kak :)',
 
 
 };
@@ -768,6 +773,7 @@ bot.command('list', async (ctx) => {
       else if (t.includes('followup')) { grouped.followup.push(tag); }
       else if (t.includes('kasar') || t.includes('marah')) { grouped.kasar.push(tag); }
       else if (t.includes('kalibrasi')) { grouped.kalibrasi.push(tag); }
+      else if (t.includes('berita')) { grouped.berita.push(tag); }
       else if (t.includes('tutor') || t.includes('tutorial') || t.includes('cara')) { grouped.tutorial.push(tag); }
       else { grouped.lainnya.push(tag); }
     });

@@ -94,7 +94,7 @@ CARA LIHAT BUKTI TRANSFER QRIS MANDIRI:
   '#cekTO': 'untuk TO/TurnOver sudah terhitung otomatis oleh sistem ya kak^^ kami tidak dapat membantu mengecek TO karena tidak memiliki akses untuk hal tesebut🙏 ',
 
   '#unlockpromo': 'untuk TO/TurnOver sudah terhitung otomatis oleh sistem ya kak^^ kami tidak dapat membantu mengecek TO karena tidak memiliki akses untuk hal tesebut🙏 ',
-  '#unclockpromo2': 'kendala terkunci TO karena promo, sudah kami bantu follow up agar dilakukan pengecekan lebih lanjut. Silakan ditunggu dan cek secara berkala pada akun Anda ya kak',
+  '#unlockpromo2': 'kendala terkunci TO karena promo, sudah kami bantu follow up agar dilakukan pengecekan lebih lanjut. Silakan ditunggu dan cek secara berkala pada akun Anda ya kak',
 
   '#unlocktidakbisa': 'mohon maaf kakak, kami memang tidak memiliki akses untuk unlock promo yang kakak claim ya kakak. Karena TO/TurnOvernya sudah terhitung otomatis ya kakak, dan akan ter-unlock secara otomatis juga ya kakak ^^ ',
 

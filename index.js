@@ -94,6 +94,7 @@ CARA LIHAT BUKTI TRANSFER QRIS MANDIRI:
   '#cekTO': 'untuk TO/TurnOver sudah terhitung otomatis oleh sistem ya kak^^ kami tidak dapat membantu mengecek TO karena tidak memiliki akses untuk hal tesebut🙏 ',
 
   '#unlockpromo': 'untuk TO/TurnOver sudah terhitung otomatis oleh sistem ya kak^^ kami tidak dapat membantu mengecek TO karena tidak memiliki akses untuk hal tesebut🙏 ',
+  '#unclockpromo2': 'kendala terkunci TO karena promo, sudah kami bantu follow up agar dilakukan pengecekan lebih lanjut. Silakan ditunggu dan cek secara berkala pada akun Anda ya kak',
 
   '#unlocktidakbisa': 'mohon maaf kakak, kami memang tidak memiliki akses untuk unlock promo yang kakak claim ya kakak. Karena TO/TurnOvernya sudah terhitung otomatis ya kakak, dan akan ter-unlock secara otomatis juga ya kakak ^^ ',
 
@@ -129,7 +130,7 @@ Untuk PG Soft :
 
 - Masuk ke dalam game yang terakhir dimainkan 
 
-- Klik ikon garis 3 di pojok kanan Bawah
+- Klik ikon garis 3 di kiri sebelah saldo
 
 - Pilih "Riwayat"`,
 
@@ -253,6 +254,7 @@ Semakin besar total taruhan yang di mainkan, semakin besar pula total bonus yang
 
 untuk bonus rollingan silahkan ditunggu saja sesuai informasi yang telah kami berikan ya kak, jika sudah memenuhi persyaratan mencapai TO/TurnOver minimal 500.000 pasti cashback/rollingan akan masuk secara otomatis ke akun kakak ^^ `,
   '#rollingan2': 'untuk bonus rollingan silahkan ditunggu saja ya, karena sudah terhitung secara otomatis kak. Jika kakak sudah memenuhi syarat TO/TurnOver mingguan sebesar 500.000 yang sudah ditentukan, pasti untuk bonus rollingan akan masuk secara otomati ke dompet utama ya kak 🙂 ', 
+  '#rollingansesuai': 'rollingan yang Anda dapatkan sudah sesuai dengan perhitungan 1% dari TO/TurnOver minggu kemarin ya kak. Syarat minimal TO/TurnOver rollingan minimal 500.000 kak, bukan dihitung dari total deposit Anda',
   '#rollingandelay':  'Mohon maaf kakak atas kendala yang terjadi saat ini, pembagian bonus rollingan/cashback mengalami keterlambatan karena gangguan langsung dari sistem. Kakak tenang saja, bonus rollingan/cashback akan tetap dibagikan kepada member yang sudah mencapai TO/TurnOver sesuai dengan yang sudah ditentukan oleh sistem, dan akan dibagikan otomatis setelah sistem kami normal kembali ya kakak 🙏🏻 Untuk rollingan TO/TurnOver-nya minimal 500.000 ya kak. Jika kakak sudah melebihi TO/TurnOver yang sudah ditentukan, maka otomatis akan mendapatkan bonus rollingannya ya kakak, dan TO/TurnOver tersebut direset setiap minggunya ya kakak, bukan dihitung dari awal bermain ^^ ',
   '#rollingandelay2': 'kami informasikan untuk pembagian bonus Rollingan/Cashback akan diundur ke hari Rabu paling lambat pukul 23:00 ya, kak 🙂 mohon maaf atas keterlambatan pembagian Rollingan/Cashback yang seharusnya hari ini namun belum dibagikan sampai saat ini ya, kak🙏 ',
   '#rollingangadapet': 'jika kakak tidak mendapatkan bonus rollingan hingga hari ini, berarti kakak belum memenuhi persyaratan minimal TO/TurnOver mingguan sebesar 500.000 ya kakak ^^ ',

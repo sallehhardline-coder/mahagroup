@@ -284,7 +284,7 @@ Kakak bisa langsung mengetuk tombol "Butuh Bantuan?" yang ada di bagian bawah sc
 Call Center: 1500 130
 
 Live Chat: Buka aplikasi SeaBank > Menu Saya > Chat dengan Customer Service `,
-  '#wdgamasuk': `kirimkan video rekam layarnya ya kak ^^
+  '#wdgamasuk': `jika memang withdraw Anda tidak masuk, kirimkan video rekam layarnya ya kak ^^
 
 1. Masuk aplikasi Ewallet/Bank  
 2. Masuk profile aplikasi Ewallet/Bank, wajib terlihat nama rekening dan nomornya 
@@ -616,7 +616,7 @@ Namun, apabila email yang terhubung dengan ID akun sudah tidak aktif atau Anda j
 
 Link Pusat Reset Password:
 
-https://widget-g7main.customersupportdesk.ai/chat?workspaceId=01a023f0-0f35-776e-9e1a-485f0eac2fac`,
+https://widget.customersupportdesk.ai/chat?workspaceId=ZDdlZjE1MDYtYmZmMy00MGYxLTg4MTctYTZhODQ4MjQ1YTk1LjAxYTAyM2YwLTBmMzUtNzc2ZS05ZTFhLTQ4NWYwZWFjMmZhYw`,
 
   '#berita1': 'untuk kendala Anda deposit beda nama dan menggunakan kode berita tidak dapat kami proses, dan saldo kami anggap hangus. Ini sudah peraturan kami. Ke depannya silakan deposit AUTO BANK/QRIS saja yang bisa beda nama dan lebih cepat terprosesnya. Terima kasih kak',
 

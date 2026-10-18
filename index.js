@@ -328,7 +328,7 @@ Silahkan menunggu karena withdraw akan di proses sesuai antrian, dan selamat ata
 5. Terakhir silahkan transfer deposit sesuai dengan kode unik yang tertera pada form deposit
 6. Setelah melakukan transfer deposit silahkan klik deposit untuk mengajukan form deposit Anda. `,
   
-  '#freeround': `FREEROUND Free Spin 8x bett 800
+  '#freeround': `FREEROUND Free Spin 5x bett 800
 Khusus provider: Pragmatic Play, Pragmatic Play Pop, No Limit City, Cosmo Play, dan PG Soft
 
 - Minimal deposit 20.000, Turnover minimal mencapai 8.000 (1x claim/hari)
@@ -343,7 +343,7 @@ Cara claim Bonus :
 - Masukkan Nominal deposit sesuai yang di inginkan (Minimal 20.000 & 100.000) lalu SUBMIT
 - Di haruskan transfer nominal sesuai dengan kode unik yang tertera di formulir deposit. `,
   
-  '#freeroundadalah': `Bonus Free Round 5x adalah bonus yang di berikan dalam bentuk GRATIS 5x bett / spin di
+  '#artifreeround': `Bonus Free Round 5x adalah bonus yang di berikan dalam bentuk GRATIS 5x bett / spin di
 Bett 800 ( BUKAN FREE SPIN / SCATTER) dan hanya berlaku di provider tertentu yang
 dapat diclaim dengan syarat menyelesaikan TO yang sudah ditentukan. `,
   

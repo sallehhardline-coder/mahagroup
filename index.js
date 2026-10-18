@@ -327,23 +327,26 @@ Silahkan menunggu karena withdraw akan di proses sesuai antrian, dan selamat ata
 4. Setelah mengisi nominal lalu klik "Deposit" akan muncul nomor rekening tujuan kami, nominal deposit beserta 2 angka kode unik
 5. Terakhir silahkan transfer deposit sesuai dengan kode unik yang tertera pada form deposit
 6. Setelah melakukan transfer deposit silahkan klik deposit untuk mengajukan form deposit Anda. `,
+  
   '#freeround': `FREEROUND Free Spin 8x bett 800
 Khusus provider: Pragmatic Play, Pragmatic Play Pop, No Limit City, Cosmo Play, dan PG Soft
 
-- Minimal deposit 20.000, Turnover minimal mencapai 16.000 (1x claim/hari)
-- Minimal deposit 100.000, Turnover minimal mencapai 40.000 (dapat di claim setiap melakukan deposit Minimal 100.000)
+- Minimal deposit 20.000, Turnover minimal mencapai 8.000 (1x claim/hari)
+- Minimal deposit 100.000, Turnover minimal mencapai 20.000 (dapat di claim setiap melakukan deposit Minimal 100.000)
 
 
 * Setiap bonus yang telah di claim harus menyelesaikan turnover di provider game sesuai yang sudah di pilih di awal setelah bett gratis selesai dan bisa di selesaikan di bett berapapun, setelah turnover selesai baru bisa berpindah ke provider game lainnya.
 
 Cara claim Bonus :
 - Klik menu deposit
-- Klik banner bonus FREE ROUND 8X yang di inginkan
+- Klik banner bonus FREE ROUND 5X yang di inginkan
 - Masukkan Nominal deposit sesuai yang di inginkan (Minimal 20.000 & 100.000) lalu SUBMIT
 - Di haruskan transfer nominal sesuai dengan kode unik yang tertera di formulir deposit. `,
-  '#freeroundadalah': `Bonus Free Round 8x adalah bonus yang di berikan dalam bentuk GRATIS 8x bett / spin di
+  
+  '#freeroundadalah': `Bonus Free Round 5x adalah bonus yang di berikan dalam bentuk GRATIS 5x bett / spin di
 Bett 800 ( BUKAN FREE SPIN / SCATTER) dan hanya berlaku di provider tertentu yang
 dapat diclaim dengan syarat menyelesaikan TO yang sudah ditentukan. `,
+  
   '#tutorparlay': `Memasang taruhan parlay (Mix Parlay) adalah menggabungkan beberapa pilihan pertandingan (minimal 3 tim) ke dalam satu tiket taruhan
 
 1. Pilih Pertandingan: Masuk ke menu "Sportsbook" (Olahraga) dan pilih cabang olahraga yang Anda inginkan (misalnya sepak bola.
@@ -352,6 +355,7 @@ dapat diclaim dengan syarat menyelesaikan TO yang sudah ditentukan. `,
 4. Pilih Opsi Parlay: Pada slip tersebut, ubah jenis taruhan menjadi Mix Parlay atau Parlay.
 5. Masukkan Nominal: Tentukan jumlah taruhan (stake) Anda. Sistem secara otomatis akan mengalikan odds (perkalian kemenangan) dari semua pertandingan yang Anda pilih.
 6. Konfirmasi: Periksa kembali pilihan Anda, lalu klik "Pasang Taruhan" atau "Place Bet". `,
+  
   '#tutortogellotwin': `cara memasang togel di provider Lotwin
 
 Lotwin:
@@ -370,7 +374,9 @@ Next4D:
 -Masukan kombinasi angka Anda pada kolom yang tersedia kak
 -Masukan nominalnya, contoh 1 untuk bettingan 1.000, dan seterusnya kak
 -Klik Kirim `,
+  
   '#adalagi': 'ada lagi kendala yang bisa kami bantu kak? ^^ ',
+  
   '#artiparlay': `-Mix Parlay adalah salah satu fitur dari permainan judi bola (sports) dengan menebak
 minimal 3 tim secara langsung.
 -Kemenangan terhitung SAH jika semua tim yang dipasang menang dalam 1 bill / struk
@@ -382,15 +388,24 @@ dianggap kalah.
 -Adapun taruhan yang bisa dimainkan di dalam permainan MIX PARLAY berupa: (HDP,
 Over/Under, 1x2, Tebak skor, Ganjil Genap, Total Skor, Gol pertama / terakhir). 
 -Berlaku untuk permainan yang sudah berjalan ataupun babak pertama saja. `,
+  
   '#baca': 'Mohon maaf kak, jika kaka tidak membaca pesan kami terlebih dahulu, maka kakak tidak akan mengerti, Mohon di baca dan di pahami pesan di atas ya kak😊 ',
+  
   '#baca2': 'silahkan dibaca dan dipahami yang sudah kami jelaskan ya kak^^ ',
+  
   '#baca3': 'mohon dibaca kembali penjelasan yang telah kami berikan sebelumnya ya, kak ^^ ',
+  
   '#baca4': 'silahkan dibaca terlebih dahulu dan dipahami informasi yang  kami berikan di atas ya kak ^^ ',
+  
   '#bacasyaratreset': 'biasakan untuk membaca informasi yang kami berikan hingga selesai terlebih dahulu, lalu dipahami, kemudian difikirkan apakah sudah memenuhi persyaratan / belum kak. Jangan malas untuk membaca ya kak 🙂 ',
+  
   '#beritadepo': 'Kami tidak pernah menyarankan kakak untuk transfer menggunakan keterangan (berita transfer) ya kak, untuk kali ini akan kami bantu proseskan depositnya. Tapi, jika ke depannya kakak masih transfer menggunakan keterangan maka deposit akan kami hanguskan  dan user ID anda akan di-banned, mohon untuk tidak melanggar dan terima kasih atas pengertiannya ^^ ',
+  
   '#beritadepo2': 'setelah kami cek Anda menggunakan kode berita pada transfer tersebut ya kak. Kami sangat melarang transfer deposit menggunakan kode berita kak. Deposit belum dapat langsung kami proses sekarang dan masih dalam pengecekan ya kak, untuk ke depannya silakan lakukan deposit melalui AUTO BANK/QRIS yang ada di menu deposit kami ya kak :)',
+  
   '#kodeunik': `jika ingin diproses dan dicek dengan cepat depositnya, biasakan transfer sesuai nominal yang muncul pada formular deposit ya, kak 🙂
 Contoh: jika yang muncul 50.058 maka transfer juga sesuai nominal tersebut kak `,
+  
   '#norekdepo': `Cara mengetahui nomor rekening deposit di website kami:
 
 -Pilih menu Deposit di halaman utama
@@ -407,7 +422,9 @@ kakak harus transfer 50.012 juga kakak, bukan hanya 50.000 saja ^^ .
 
 Terima kasih 🙏🏻 `,
   '#norekgakedaftar': 'nomor rekening yang kakak berikan tidak terdaftar di situs kami kak. Tolong berikan nomor rekening yang benarnya ya, kak 🙂 ',
+  
   '#norekbaru': 'tolong kirimkan nomor rekening BANK/EWALLET terbarunya, agar dapat kami cek terlebih dahulu kak 🙂 ',
+  
   '#clearcache': `wajib menggunakan browser Google Chrome dan hapus Cache browesrnya dengan cara di bawah ini kak:
 
 - Klik titik 3 di pojok kanan atas browser Google Chrome
@@ -418,6 +435,7 @@ Terima kasih 🙏🏻 `,
 - Terakhir pilih "Hapus data"
 
 silakan dicoba, dan pastikan juga jaringan yang Anda gunakan itu stabil serta lancar ya kak 🙂 `,
+  
   '#clearcache2': `silahkan di coba ikuti Langkah-langkah berikut ini kak :  
 
 1. Pastikan semua tab/game yang sedang terbuka sudah benar-benar ditutup (close all tabs).
@@ -430,6 +448,7 @@ silakan dicoba, dan pastikan juga jaringan yang Anda gunakan itu stabil serta la
 
 5. Setelah itu, silakan coba akses kembali game yang mengalami kendala.`,
   '#dompetutama': 'saldo kakak sudah berada di dompet utama ya, silakan direfresh dan dicek kembali kak ^^ ',
+  
   '#bonusapk': `cara claim bonus EXP VIP:
 
 - Download "Web APP" kami dari halaman browser. Letaknya di sini: https://prnt.sc/dZIIlawYab6u
@@ -438,47 +457,82 @@ silakan dicoba, dan pastikan juga jaringan yang Anda gunakan itu stabil serta la
 - Cek bagian "Bonus Saya"
 - Lalu ke "Riwayat VIP Yang Ditukarkan"
 - Nanti akan muncul bonus EXP VIP yang sudah otomatis masuk dan terhitung ke dalam EXP VIP Anda kak. Contohnya seperti ini kak: https://prnt.sc/Jf-_7nadaP9K `,
+  
   '#NLC': 'Baik kakak, disini kami cek kakak mengambil Promosi Spin Gratis No Limit City ya kak. Silakan bermain di provider No Limit CIty untuk menyelesaikan Promo/TurnOver yang kaka ambil, dan jika sudah selesai, maka TurnOver-nya akan terbuka secara otomatis ^^ ',
+  
   '#PP': 'Baik kakak, di sini kami cek kaka mengambil Promosi Spin Gratis PP ya ka. Silakan bermain di Provider Pragmatic Play ya kak untuk menyelesaikan Promo/TurnOver yang kaka ambil, dan jika sudah selesai maka TurnOver-nya akan terbuka secara otomatis ^^  ',
+  
   '#FATPANDA': 'Baik bosku, di sini kami cek boskumengambil Promosi Spin Gratis PRAGMATIC PLAY POP ya bosku. Silakan bermain di provider PRAGMATIC PLAY POP untuk menyelesaikan Promo/TurnOver yang kakak ambil, dan jika sudah selesai, maka TurnOver-nya akan terbuka secara otomatis ^^ ',
+  
   '#PG': 'Baik kakak, di sini kami cek kaka mengambil Promosi Spin Gratis PG Soft ya ka. Silakan bermain di Provider PG Soft ya kak untuk menyelesaikan Promo/TurnOver yang kaka ambil, dan jika sudah selesai maka TurnOver-nya akan terbuka secara otomatis ^^   ',
+  
   '#COSMO': 'Baik kakak, di sini kami cek kaka mengambil Promosi Spin Gratis PG Soft ya ka. Silakan bermain di Provider Cosmo Play ya kak untuk menyelesaikan Promo/TurnOver yang kaka ambil, dan jika sudah selesai maka TurnOver-nya akan terbuka secara otomatis ^^ ',
+  
   '#donepromo': 'promo yang kakak claim sudah ter-unlock ya kak, silahkan re-login/log out lalu login kembali ya kak ^^ ',
+  
   '#edc': 'Jika kaka deposit melalui mesin EDC/WBNK maka kami akan proses setelah 1x24 jam ya ka. Silakan kembali lagi setelah 1x24 jam, dengan mengirimkan kembali screenshot bukti transfernya ya kak 🙂 ',
-  '#estimasi': 'kami belum bisa memastikan untuk estimasinya kakak, silahkan ditunggu dan cek secara berkala untuk dapat mengetahui jika sudah normal kembali ya kakak🙏🏻 ',
+  
+  '#estimasi': 'kami belum bisa memastikan untuk estimasinya kak, silakan ditunggu dan cek secara berkala untuk dapat mengetahui jika sudah normal kembali ya kak',
+  
   '#estimasi2': 'untuk estimasi waktunya belum dapat kami pastikan ya kak, silahkan ditunggu saja dan dicek secara berkala ^^ ',
+  
   '#estimasireset': 'mohon ditunggu ya kak, selama proses reset akun jangan dimainkan saldonya kak. Estimasi peresetan akun sekitar 30 menit / lebih daripada itu ya kak, mohon ditunggu kabar terbaru dari kami / kakak bisa menghubungi HUMAS kami di Whatsapp / Telegram untuk mengetahui proses reset akun yang sedang berlangsung 🙂 ',
-  '#akunterbatas': `jika akun kakak dibatasi itu karena kakak memasukkan ID atau PASWORD yang tidak sesuai secara terus menerus ya kak 🙂
-silahkan diingat kembali ID/PASWORD yang kakak gunakan, lalu dicoba kembali setelah 24 jam ke depan  kak ^^ `,
+  
+  '#akunterbatas': `jika akun kakak dibatasi itu karena kakak memasukkan ID/PASSWORD/CAPTCHA yang tidak sesuai secara terus-menerus ya kak 🙂
+silahkan diingat kembali ID/PASSWORD yang kakak gunakan, dan masukan CAPTCHA yang muncul dengan benar setelah 24 jam ke depan  kak `,
+  
   '#daftarbaru': `untuk membuat/mendaftarkan akun baru, kakak bisa pergi ke menu "Daftar" ya kak 🙂
 Letaknya ada di sini kak: https://prnt.sc/A1EE_g3C10x6 `,
-  '#followup': 'untuk kendala tersebut sudah kami bantu follow up ya kak, mohon bersbar menunggu dalam 1x24 jam ke depan dan dicek secara berkala kak ^^ ',
-  '#followup2': 'mohon bersabar menunggu ya kak, karena memang masih dalam proses pengecekan lebih lanjut ^^ ',
-  '#followup3': 'mohon maaf atas keterlambatannya ya kak, namun hingga saat ini memang masih dalam proses pengecekan kak 🙏🏻 ',
+  
+  '#followup': 'untuk kendala tersebut sudah kami bantu follow up ya kak, mohon bersbar menunggu dalam 1x24 jam ke depan dan dicek secara berkala kak ',
+  
+  '#followup2': 'mohon bersabar menunggu ya kak, karena memang masih dalam proses pengecekan lebih lanjut',
+  
+  '#followup3': 'mohon maaf atas keterlambatannya ya kak, namun hingga saat ini memang masih dalam proses pengecekan kak ',
+  
   '#followup4': 'baik kakak, untuk kendala tersebut masih dalam proses pengecekan kembali ya kak ^^ mohon maaf atas keterlambatannya kak, akan kami follow up kembali hingga kendalanya terselesaikan ya kak 🙂 ',
+  
   '#maafkendala': 'mohon maaf atas ketidaknyamanannya dan kendala yang terjadi kak 🙏😊 ',
-  '#kendalamembaca': 'jika memiliki kendala dalam hal membaca, maka mintalah bantuan orang lain untuk membacakan dan menjelaskannya kepada Anda ya kak ^^ ',
+  
+  '#kendalamembaca': 'jika memiliki kendala dalam hal membaca, mintalah bantuan orang lain untuk membacakan dan menjelaskannya informasi yang kami sampaikan kepada Anda ya kak ',
+  
   '#followuptanpabukti': 'silahkan ditunggu saja hingga saldo masuk, karena kami tidak dapat membantu follow up jika tidak ada bukti transaksi secara detail ya kak, terima kasih 🙂 ',
-  '#capca': `silahkan masukkan captcha yang tersedia untuk validasi pendaftaran dengan mengikuti angka, huruf besar/kecil yang muncul. Jika salah, tekan refresh di sebelah captcha untuk mengganti captcha yang baru dan masukkan kembali dengan benar.
+  
+  '#capca': `silakan masukkan captcha yang tersedia untuk validasi pendaftaran dengan mengikuti angka, huruf besar/kecil yang muncul. Jika salah, tekan refresh di sebelah captcha untuk mengganti captcha yang baru dan masukkan kembali dengan benar.
 Selamat mencoba, semoga berhasil kak🙏🏻😊 `,
+  
   '#tambahrek': 'tidak bisa ya kak, 1 akun hanya 1 nomor rekening BANK/Ewallet saja kak ^^ ',
+  
   '#ewalletprem': 'silakan dipremiumkan terlebih dahulu ewallet yang Anda gunakan ya kak, agar mendapatkan limit bulanan yang lebih besar daripada ewallet yang belum premium ^^ ',
+  
   '#bahas': 'mohon maaf kakak kami tidak mengerti apa yang kakak maksud 😊 ',
+  
   '#bahas2': `Mohon maaf kakak kami hanya melayani chat seputar kendala deposit, withdraw, atau tidak dapat mengakses website kami 🙂 mohon dipahami ya kak^^ `,
+  
   '#bahas3': 'mohon gunakan kosakata dan tatanan huruf yang benar agar dapat dimengerti kak ^^ ',
+  
   '#wdantri1': 'Untuk proses withdraw sedang dalam antrian ya kakak, silahkan untuk ditunggu dan dicek secara berkala pada rekening E-WALLET / BANK yang kakak gunakan ya ^^',
+  
   '#wdantri2': 'semua akan kami proses sesuai antrian ya kakak, silahkan untuk ditunggu saja. Terima kasih kak :)',
+  
   '#wdantri3': 'Baik kakak, mohon kesabarannya untuk menugggu ya kak. Semua kami proses sesuai dengan antrian ya kak, biasakan untuk menunggu beberapa saat dahulu ya kakak ^^ Terimakasih 😊🙏',
+  
   '#wdantri4': 'kami informasikan untuk saat ini proses withdraw kami sedang sangat-sangat ramai&padat ya kak🙏 namun semua withdraw juga sedang dalam proses sesuai antrian ya kak🥰 kami mohon kerjasama dan kesabarannya menunggu proses withdrawnya hingga sukses ya kak🥰 withdraw berapapun pasti kami bayar💸💸💸',
+  
   '#wdantri5': 'mohon untuk ditunggu dan dicek secara berkala proses withdrawnya hingga sukses ya kak :) withdraw berapapun pasti kami bayar💸💸💸',
+  
   '#wddone': `withdraw Anda sudah sukses dan berhasil kami proses ya kak🥰 silakan dicek & refresh pada EWALLET/M-Banking yang Anda gunakan kak😉
 
 Salam Sensational & Terima Kasih ^^`,
+  
   '#wdcutoff': `Mohon maaf kakak, saat ini Withdraw BANK tujuan BRI & MANDIRI sedang memasuki waktu Cut Off/jam offline transaksi antar BANK dari pihak BANK terkait. Estimasi waktu pukul 04.00 WIB akan normal kembali ya, kak :) Jika sudah melewati jam cut off/offline maka transaksi kakak akan segera kami proses.
 Terima kasih atas pengertiannya, kak. 🙏🏻`,
+  
   '#wdgagalotomatis': `untuk kendala withdraw ditolak otomatis oleh sistem, sedang dalam pengecekan tim kami ya kak 🙂 kami sarankan untuk mengajukan ulang nanti pagi pukul 04:00 setelah normal ya kak. Mohon maaf atas kendala yang terjadi, dan terima kasih sudah mau mengerti penjelasan kami kak🙏`,
+  
   '#wdbcamt': `untuk saat ini Withdraw akan diproseskan sesuai antrian ya kak, namun ada keterlambatan dikarenakan saat ini BANK yang digunakan untuk melakukan proses transfer Withdraw yaitu BANK BCA sedang dalam pemeliharaan sistem dari pihak BANK BCA-nya langsung.
 Kami mohon kesabarannya dan menunggu untuk proses Withdraw nya ya, kak ^^`,
+  
   '#mindepowd': `Untuk Deposit & Minimal Deposit ada 2 Metode pilihan :
 - Auto Bank
 - Transfer Bank
@@ -488,12 +542,10 @@ Syarat & Ketentuan
 - Untuk tujuan Deposit TRANSFER BANK minimal Deposit 20.000
 
 Untuk penarikan/withdraw
-- Minimal saldo yang bisa diwithdraw sebesar 20.000
+- Minimal saldo yang bisa diwithdraw sebesar 10.000
 
 Silahkan kakak bisa pilih salah satu metode deposit yang tertera di menu Form Deposit :)`,
   
-  '#kendalamembaca': 'jika memiliki kendala dalam hal membaca, maka mintalah bantuan orang lain untuk membacakan dan menjelaskannya kepada Anda ya kak ^^ ',
-
   '#kasar': 'sebaiknya gunakan kata yang pantas dan baik yah kaka. karena setiap kata yang terucap itu adalah doa. coba kaka berkata yang baik. semoga saja kaka kedepannya akan mendapat kemenangan yang luar biasa yah kak. ',
 
   '#kasar2': 'Kami mohon kerja samanya ya kakak untuk tidak menggunakan kata-kata kasar atau tidak pantas sehingga kami dapat memberikan pelayanan terbaik untuk kaka🙏🙏 ',

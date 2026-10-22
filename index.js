@@ -98,7 +98,7 @@ CARA LIHAT BUKTI TRANSFER QRIS MANDIRI:
 
   '#unlocktidakbisa': 'mohon maaf kakak, kami memang tidak memiliki akses untuk unlock promo yang kakak claim ya kakak. Karena TO/TurnOvernya sudah terhitung otomatis ya kakak, dan akan ter-unlock secara otomatis juga ya kakak ^^ ',
 
-  '#sskendala': 'bisa dibantu untuk mengirimkan screenshot/rekam layar kendala yang kakak alami saat ini kak? ^^ ',
+  '#sskendala': 'tolong kirimkan screenshot/rekam layar kendala yang Anda alami kak :)',
 
   '#ssrekening': 'silakan kirimkan screenshot yang menampilkan nama & nomor rekening BANK/Ewallet pada apikasi BANK/Ewallet-nya kak ', 
 
@@ -174,9 +174,10 @@ Saldo pada ID __ tidak dapat kami proses withdrawnya, akun sudah tidak dapat kam
 
   '#cancelwdproses': 'baik kakak, mohon untuk ditunggu proses pembatalan/cancel withdrawnya ya 🙂 ',
 
-  '#kendala': 'hallo kakak, selamat datang di website kami^^ bisa dibantu jelaskan kendalanya? Agar dapat kami bantu ^^',
+  '#kendala': `hallo kakak, selamat datang di website kami^^
+  bisa dibantu jelaskan kendalanya? Agar dapat kami bantu`,
   
-  '#detail': 'hallo kakak, bisa dijelaskan dengan detail terkait kendala yang terjadi kak? Agar kami bisa cek dan bantu kendalanya kak^^',
+  '#detail': 'jelaskan dengan detail kendala yang terjadi kak, agar kami bisa cek dan bantu kendalanya ya kak',
 
   '#isiformat': 'silakan disalin dan diisi formatnya dengan benar dan sesuai dengan yang kami kirimkan ya kak',
 
@@ -246,37 +247,55 @@ https://prnt.sc/HeeIdXsTdm4L (Tampilan Versi Dekstop / WEB)
 letaknya di sini ya kak: https://prnt.sc/fDgslRZRhLE2 `,
   '#selamatwd': `selamat atas kemenangannya ya kak🤩 kami do'akan semoga mendapat JACKPOT MAXWIN di kesempatan berikutnya kak🥳🥳🥳
 jangan lupa ajak teman-temannya bermain di situs kami ya kak🥰😍 Withdraw berapapun pasti dibayar💸💸💸 `,
+  
   '#selesaikanpromo': 'silakan diselesaikan TO/TurnOver dari promonya, agar dapat berpindah permainan ke provider lain/melakukan withdraw ya, kak ^^ ',
+  
   '#rollingan': `Bonus Cashback/rollingan akan di bagikan otomatis hari Selasa dan paling lambat hari Rabu maksimal pukul 23:00.
 Waktu reset perhitungan Turnover mulai dari hari MINGGU 03.00AM - SABTU 03.00AM.
 Syarat minimal Turnover mencapai 500.000,-
 Semakin besar total taruhan yang di mainkan, semakin besar pula total bonus yang di dapatkan.
 
 untuk bonus rollingan silahkan ditunggu saja sesuai informasi yang telah kami berikan ya kak, jika sudah memenuhi persyaratan mencapai TO/TurnOver minimal 500.000 pasti cashback/rollingan akan masuk secara otomatis ke akun kakak ^^ `,
+  
   '#rollingan2': 'untuk bonus rollingan silahkan ditunggu saja ya, karena sudah terhitung secara otomatis kak. Jika kakak sudah memenuhi syarat TO/TurnOver mingguan sebesar 500.000 yang sudah ditentukan, pasti untuk bonus rollingan akan masuk secara otomati ke dompet utama ya kak 🙂 ', 
+  
   '#rollingansesuai': 'rollingan yang Anda dapatkan sudah sesuai dengan perhitungan 1% dari TO/TurnOver minggu kemarin ya kak. Syarat minimal TO/TurnOver rollingan minimal 500.000 kak, bukan dihitung dari total deposit Anda',
+  
   '#rollingandelay':  'Mohon maaf kakak atas kendala yang terjadi saat ini, pembagian bonus rollingan/cashback mengalami keterlambatan karena gangguan langsung dari sistem. Kakak tenang saja, bonus rollingan/cashback akan tetap dibagikan kepada member yang sudah mencapai TO/TurnOver sesuai dengan yang sudah ditentukan oleh sistem, dan akan dibagikan otomatis setelah sistem kami normal kembali ya kakak 🙏🏻 Untuk rollingan TO/TurnOver-nya minimal 500.000 ya kak. Jika kakak sudah melebihi TO/TurnOver yang sudah ditentukan, maka otomatis akan mendapatkan bonus rollingannya ya kakak, dan TO/TurnOver tersebut direset setiap minggunya ya kakak, bukan dihitung dari awal bermain ^^ ',
+  
   '#rollingandelay2': 'kami informasikan untuk pembagian bonus Rollingan/Cashback akan diundur ke hari Rabu paling lambat pukul 23:00 ya, kak 🙂 mohon maaf atas keterlambatan pembagian Rollingan/Cashback yang seharusnya hari ini namun belum dibagikan sampai saat ini ya, kak🙏 ',
+  
   '#rollingangadapet': 'jika kakak tidak mendapatkan bonus rollingan hingga hari ini, berarti kakak belum memenuhi persyaratan minimal TO/TurnOver mingguan sebesar 500.000 ya kakak ^^ ',
-  '#rollingangadapet2': 'Rollingan/Cashback sudah terhitung otomatis oleh sistem ya kak, dan akan masuk secara otomatis di dompet utama kakak. Apabila kakak tidak mendapatkan bonus rollingan/cashback, berarti kakak tidak mencapai syarat minimal TO/TurnOver sebesar 500.000 pada minggu kemarin ya^^ ',
+  
+  '#rollingangadapet2': 'rollingan/cashback sudah dibagikan, jika Anda tidak mendapatkan bonus rollingan/cashback, berarti Anda tidak mencapai syarat minimal TO/TurnOver sebesar 500.000 pada minggu kemarin ya kak',
+  
   '#rollinganrules': 'baik kakak, untuk rollingan TO nya minimal 500.000 ya kaka. Jika kakak sudah melebihi TO/TurnOver yang di tentukan maka otomatis akan mendapatkan bonus rollingannya ya, kak. Dan TO/TurnOver tersebut di-reset setiap minggunya ya kakak, bukan dihitung dari awal bermain ^^ ', 
+  
   '#rollinganrules2': 'untuk rollingan minggu ini adalah hasil perhitungan TO/TurnOver dari minggu lalu ya kak. Untuk TO/TurnOver minggu ini, akan dihitung untuk rollingan minggu depan kak 🙂 ',
+  
   '#rollingandone': `untuk rollingan sudah dibagikan ya kak. Silakan dicek dompet utamanya ^^ 
 Untuk rollingan dihitung sesuai dengan Turn Over permainan (bukan jumlah deposit), jika kakak tidak mendapatkan rollingan, maka Turn Over yang kakak mainkan belum mencapai syarat minimal Turn Over sebesar 500.000 ya kak 🙂 `,
+  
   '#cashback': `Cashback/Rollingan Slot 1% dari total TO/TurnOver. Akan otomatis masuk setiap hari SELASA - RABU maksimal pukul 23.00 WIB. Minimal TO/TurnOver 500.000
 
 Cashback/Rollingan SportBook 1% dari total TO/TurnOver. Akan otomatis masuk setiap hari SELASA - RABU maksimal pukul 23.00 WIB. `,
   '#qris1x24': 'Mohon maaf atas kendala deposit AUTOBANK / QRIS yang Anda alami ya kakak. Untuk depositnya sudah kami bantu laporkan kembali ke tim terkait untuk proses pengecekan, mohon kesediannya untuk menunggu maksimal 1x24 jam. ',
+  
   '#qrisbcagagal': 'terkait kendala deposit QRIS transaksi gagal, namun saldo sudah terpotong. Silakan ditunggu dan cek secara berkala hingga saldonya kembali ke BCA yang Anda gunakan ya kak / menghubungi pihak Customer Service dari pihak BANK BCA yang Anda gunakan untuk menanyakan perkembangan transaksi yang telah kakak lakukan ya kak, terima kasih ^^ ', 
+  
   '#qriserror': 'Mohon maaf kakak, saat ini metode Auto BANK/QRIS sedang mengalami gangguan dan belum bisa dipastikan untuk estimasi nya 🙂 kami sarankan kakak untuk melakukan deposit melalui metode Transfer BANK yang ada di menu deposit kami ^^ ',
+  
   '#qrispastimasuk': 'untuk depositnya pasti saldo akan masuk ke akun kakak ya^^ Jika dalam 1 x 24 jam ke depan saldo belum masuk ke akun kakak, maka silakan untuk menghubungi kami, agar kami bantu follow up kendala depositnya kak 🙂 ',
+  
   '#qrispending1': `untuk deposit melalui QRIS itu akan masuk secara otomatis ya kak, jadi silahkan bersabar untuk menunggu dengan estimasi waktu 1-15 menit ke depan. Jika saldo belum juga masuk, maka silahkan kembali lagi untuk chat kami ya kak. 
 
 Terima kasih ^^r `,
+  
   '#qrispending2': `qris sedang mengalami sedikit gangguan dan delay mohon ditunggu beberapa saat dan di cek secara berkala yah kak^^
 saldo yang sudah di transferkan kami pastikan akan terproses jika sudah normal kembali^^
 
 Terima kasih atas pengertian nya kak^^ `,
+  
   '#qriseabankgagal': `transaksi gagal/tidak ditemukan pada merchant QRIS kami kak. Silakan ajukan refund ke pihak SEBANK dengan cara:
 
 Kakak bisa langsung mengetuk tombol "Butuh Bantuan?" yang ada di bagian bawah screenshot transaksi tersebut di aplikasi SeaBank kakak, atau hubungi lewat jalur resmi:
@@ -284,6 +303,7 @@ Kakak bisa langsung mengetuk tombol "Butuh Bantuan?" yang ada di bagian bawah sc
 Call Center: 1500 130
 
 Live Chat: Buka aplikasi SeaBank > Menu Saya > Chat dengan Customer Service `,
+  
   '#wdgamasuk': `jika memang withdraw Anda tidak masuk, kirimkan video rekam layarnya ya kak ^^
 
 1. Masuk aplikasi Ewallet/Bank  
@@ -291,6 +311,7 @@ Live Chat: Buka aplikasi SeaBank > Menu Saya > Chat dengan Customer Service `,
 3. Masuk Riwayat Transaksi/Mutasi dan discroll secara perlahan ke bawah sampai melewati batas tanggal withdraw Anda kak
 
 video wajib detail, dan jernih ya kak :)`,
+  
   '#kalibrasi': `Cara untuk mengembalikan saldo ke dompet utama/kalibrasi:
 
 - Masuk kembali ke dalam game dimana saldo terakhir berada
@@ -300,7 +321,9 @@ video wajib detail, dan jernih ya kak :)`,
 - Terakhir, tunggu beberapa saat hingga saldo Anda terupdate ke dompet utama
 
 Silahkan ikuti langkah-langkah nya sesuai yang kami arahkan ya kak 🙏 `,
+  
   '#kalibrasiygbener': 'lakukan langkah kalibrasi dengan benar, sesuai arahan yang kami berikan kak. Tidak mungkin saldo tidak kembali jika sudah benar melakukan kalibrasinya kak. Jika saldo tidak kembali ke dompet utama, berarti kakak tidak melakukan kalibrasi dengan benar/tidak sesuai arahan kami 🙂 ',
+  
   '#carawd': `BERIKUT LANGKAH-LANGKAH PENARIKAN / WITHDRAW :
 
 - Klik ikon refresh di samping tampilan saldo akun
@@ -312,6 +335,7 @@ Silahkan ikuti langkah-langkah nya sesuai yang kami arahkan ya kak 🙏 `,
 - Klik “OK / YA”
 
 Silahkan menunggu karena withdraw akan di proses sesuai antrian, dan selamat atas kemenangannya 🙏🏻 `,
+  
   '#caradepoqr': `CARA DEPOSIT AUTO BANK / QRIS ( DIPROSES SECARA OTOMATIS )
 
 1. Silakan pilih metode deposit Auto Bank 
@@ -319,6 +343,7 @@ Silahkan menunggu karena withdraw akan di proses sesuai antrian, dan selamat ata
 3. Klik tulisan "Deposit"
 4. Pada halaman berikutnya scan / Download Barcode QRIS yang muncul
 5. Silakan ditunggu 1-15 menit hingga deposit sukses dan saldo berada di dompet utama `,
+  
   '#caradepo': `CARA DEPOSIT TRANSFER BANK 
 
 1. Silakan pilih metode deposit Transfer Bank

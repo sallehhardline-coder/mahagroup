@@ -706,6 +706,10 @@ https://widget.customersupportdesk.ai/chat?workspaceId=ZDdlZjE1MDYtYmZmMy00MGYxL
 
   '#berita3': 'tetap tidak bisa kami proses depositnya karena Anda transfer dari beda nama rekening dan mengisi kode berita ya kak ^^ ke depannya deposit AUTO BANK / QRIS saja yang lebih cepat dan bisa dari beda nama rekening ya kak :)',
 
+  '#ssrek': 'silakan kirimkan screenshot yang menampilkan nama & nomor rekening BANK/Ewallet pada apikasi BANK/Ewallet-nya kak',
+
+  '#sskendala': 'tolong kirimkan screenshot/rekam layar kendala yang Anda alami kak', 
+
 
 };
 

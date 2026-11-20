@@ -99,9 +99,7 @@ CARA LIHAT BUKTI TRANSFER QRIS MANDIRI:
 
   '#unlocktidakbisa': 'mohon maaf kakak, kami memang tidak memiliki akses untuk unlock promo yang kakak claim ya kakak. Karena TO/TurnOvernya sudah terhitung otomatis ya kakak, dan akan ter-unlock secara otomatis juga ya kakak ^^ ',
 
-  '#sskendala': 'tolong kirimkan screenshot/rekam layar kendala yang Anda alami kak :)',
-
-  '#ssrekening': 'silakan kirimkan screenshot yang menampilkan nama & nomor rekening BANK/Ewallet pada apikasi BANK/Ewallet-nya kak ', 
+  '#sskendala': 'tolong kirimkan screenshot/rekam layar kendala yang Anda alami kak :)', 
 
   '#ssriwayatpermainan': 'dibantu kirimkan screenshoot riwayat permainan/bettingannya yang ada di dalam game ya kak ',
 
